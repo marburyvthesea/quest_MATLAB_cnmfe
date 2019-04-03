@@ -12,7 +12,7 @@ size_ = [size(files)] ;
 len = size_(1) ; 
 
 files_array = {} ;
-for i = 1:len ;
+for i = 1:len 
   files_array{i,1} = files{i, 1}.name ; 
 end
 
