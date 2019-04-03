@@ -16,20 +16,19 @@ echo The folder to search is
 echo $FOLDER_path
 
 cd ~
-
 #add project directory to PATH
-#
-#load modules to use
-#module load python/anaconda3.6 
+export PATH=$PATH/projects/p30771/
+
 
 #load modules to use
-#
+module load matlab/r2018a
+
 #cd to script directory
-#cd /projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe
-cd /Users/johnmarshall/Documents/MATLAB/CNMF_E/quest_analysis
+
+cd /projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe
 #run  
 
-#TO DO: modify this to take folder path as input to batch run and then find files in the input folder
+#takes folder path as input to batch run and then find files in the input folder
 
 matlab -nosplash -nodesktop -r "run('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/batch_run_with_input_data_jjm($FOLDER_path)');exit;"
 
