@@ -20,8 +20,8 @@ nams = files_array ;
 disp('found files')
 disp(nams)
 
-%call batch_run.m to start batch CNMF_E
-%run_cnmfe_batch_matlab_jjm(nams, 13, 40, 20, false)
+call batch_run.m to start batch CNMF_E
+run_cnmfe_batch_matlab_jjm(nams, 13, 40, 20, false)
 
 
 
