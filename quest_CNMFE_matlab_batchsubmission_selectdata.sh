@@ -5,7 +5,7 @@
 #MSUB -M johnjmarshall@u.northwestern.edu
 #MSUB -j oe
 #MSUB -N matlab_batch_cnmfe_run
-#MSUB -l nodes=1:ppn=20
+#MSUB -l nodes=1:ppn=12
 
 
 #pass folder path as 1st command line argument
