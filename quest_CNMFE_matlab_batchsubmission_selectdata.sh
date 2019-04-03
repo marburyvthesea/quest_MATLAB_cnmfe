@@ -1,6 +1,6 @@
 #!/bin/bash
 #MSUB -A p30771
-#MSUB -q short
+#MSUB -q normal
 #MSUB -l walltime=12:00:00
 #MSUB -M johnjmarshall@u.northwestern.edu
 #MSUB -j oe
