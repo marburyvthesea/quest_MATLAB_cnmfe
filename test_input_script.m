@@ -10,10 +10,11 @@ disp(folder_path)
 files = {dir(fullfile(folder_path, '*.h5'))} ;
 size_ = [size(files)] ; 
 len = size_(1) ; 
+file_names = {files{1,1}.name} ;
 
 files_array = {} ;
-for i = 1:len ;
-  files_array{i,1} = files{i, 1}.name ; 
+for i = 1:len 
+  files_array{i,1} = files_names{1,i} ; 
 end
 
 nams = files_array ; 
