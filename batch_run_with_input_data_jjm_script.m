@@ -27,7 +27,6 @@ addpath(folder_path)
 
 
 addpath('/projects/p30771/MATLAB/CNMF_E/') ;
-cnmfe_setup ; 
 
 disp('running cnmfe')
 
