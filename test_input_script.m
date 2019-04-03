@@ -12,6 +12,8 @@ size_ = [size(files)] ;
 len = size_(1) ; 
 file_names = {files{1,1}.name} ;
 
+disp(len)
+
 files_array = {} ;
 for i = 1:len 
 	disp(i)
