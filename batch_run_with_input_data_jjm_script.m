@@ -30,7 +30,7 @@ addpath('/projects/p30771/MATLAB/CNMF_E/') ;
 
 disp('running cnmfe')
 
-call batch_run.m to start batch CNMF_E
+%call batch_run.m to start batch CNMF_E
 run_cnmfe_batch_matlab_jjm(nams, 13, 40, 20, false)
 
 
