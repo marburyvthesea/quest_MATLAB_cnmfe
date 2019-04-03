@@ -14,7 +14,8 @@ file_names = {files{1,1}.name} ;
 
 files_array = {} ;
 for i = 1:len 
-  files_array{i,1} = file_names{1,i} ; 
+	disp(i)
+	files_array{i,1} = file_names{1,i} ; 
 end
 
 nams = files_array ; 
