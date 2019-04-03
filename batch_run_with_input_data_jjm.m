@@ -1,4 +1,4 @@
-function [] = batch_run_with_input_data_jjm(folder_path, reg_exp, file_extension)
+function [] = batch_run_with_input_data_jjm(folder_path)
 %input variable is folder path to find files
 
 %find all appropriate hdf files in the folder
