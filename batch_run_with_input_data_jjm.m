@@ -7,15 +7,21 @@ disp(folder_path)
 
 %combine paths into cell array
 
-array_test = {dir(fullfile(folder_with_files, '*.h5'))}
+files = {dir(fullfile(folder_path, '*.h5'))} ;
+size_ = [size(files)] ; 
+len = size_(1) ; 
 
-for i in range size(array_test):
-	new_cell_array = {array_test{1, 1}(1).name, array_test{1, 1}(2).name}
+files_array = {} ;
+for i = 1:len ;
+  files_array{i,1} = files{i, 1}.name ; 
+end
+
+nams = files_array ; 
+disp('found files')
+disp(nams)
 
 %call batch_run.m to start batch CNMF_E
-
-
-batch_run(new_cell_array)
+%run_cnmfe_batch_matlab_jjm(nams, 13, 40, 20, false)
 
 
 

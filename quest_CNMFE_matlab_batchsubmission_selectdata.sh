@@ -31,6 +31,6 @@ cd /Users/johnmarshall/Documents/MATLAB/CNMF_E/quest_analysis
 
 #TO DO: modify this to take folder path as input to batch run and then find files in the input folder
 
-matlab -nosplash -nodesktop -r "run('/users/johnmarshall/Documents/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/batch_run_with_input_data_jjm($FOLDER_path)');exit;"
+matlab -nosplash -nodesktop -r "run('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/batch_run_with_input_data_jjm($FOLDER_path)');exit;"
 
 
