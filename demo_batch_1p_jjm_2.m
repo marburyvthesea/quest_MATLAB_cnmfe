@@ -11,7 +11,7 @@
 %% choose multiple datasets or just one  
 neuron = Sources2D(); 
 %nams = {'./data_1p.tif'};          % you can put all file names into a cell array; when it's empty, manually select files 
-nams = files_to_run ; 
+ 
 nams = neuron.select_multiple_files(nams);  %if nam is [], then select data interactively 
 
 %% parameters  
