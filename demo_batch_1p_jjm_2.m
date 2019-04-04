@@ -6,7 +6,11 @@
 % batch_frames_num = number of frames in each movie batch
 % gSig
 % gSiz
-% Fs 
+% Fs
+% ssub 
+
+% switch off plotting of neurons at end
+plot = false; 
 
 %% choose multiple datasets or just one  
 neuron = Sources2D(); 
@@ -23,7 +27,7 @@ pars_envs = struct('memory_size_to_use', 50, ...   % GB, memory space you allow 
   % -------------------------      SPATIAL      -------------------------  %
 %gSig = 13;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
 %gSiz = 40;          % pixel, neuron diameter
-ssub = 1;           % spatial downsampling factor
+%ssub = 1;           % spatial downsampling factor
 with_dendrites = true;   % with dendrites or not
 if with_dendrites
     % determine the search locations by dilating the current neuron shapes
@@ -148,7 +152,8 @@ neuron.correlation_pnr_batch();
 
 %% concatenate temporal components 
 neuron.concatenate_temporal_batch(); 
-neuron.viewNeurons([],neuron.C_raw); 
-
+if plot
+    neuron.viewNeurons([],neuron.C_raw); 
+end
 %% save workspace 
 neuron.save_workspace_batch(); 

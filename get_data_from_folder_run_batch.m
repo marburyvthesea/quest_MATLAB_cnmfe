@@ -4,12 +4,15 @@
 %find all appropriate hdf files in the folder
 disp('this is the folder path')
 disp(folder_path) 
-%disp('number of frames in each batch:')
-%disp(batch_frames_num)
-%disp('gSig:')
-%disp(gSig)
-%disp('gSiz:')
-%disp(gSiz)
+disp('number of frames in each batch:')
+disp(batch_frames_num)
+disp('gSig:')
+disp(gSig)
+disp('gSiz:')
+disp(gSiz)
+disp('Spatial downsampling factor:')
+disp(ssub)
+
 
 %combine paths into cell array
 
@@ -31,8 +34,10 @@ disp('found files')
 disp(nams)
 addpath(folder_path)
 
-
+% add cnmfe folder to path
 addpath(genpath('/projects/p30771/MATLAB/CNMF_E/')) ;
+% run cnmfe_setup
+cnmfe_setup
 
 disp('running cnmfe')
 % define cnmfe run params

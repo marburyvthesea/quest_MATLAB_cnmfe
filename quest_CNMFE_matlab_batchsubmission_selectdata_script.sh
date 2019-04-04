@@ -11,9 +11,15 @@
 #pass folder path as 1st command line argument
 
 FOLDER_path=$1
-#NUM_frames=$2
-#IN_gSig=$3 
-#IN_gSiz=$4  
+
+# other parameters for CNMF_E
+
+NUM_frames_per_batch=5000 
+INPUT_gSig=13 
+INPUT_gSiz=40
+INPUT_Fs=20
+#spatial downsampling 
+INPUT_ssub=2
 
 echo The folder to search is 
 echo $FOLDER_path
