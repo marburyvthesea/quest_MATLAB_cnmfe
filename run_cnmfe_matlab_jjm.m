@@ -1,8 +1,9 @@
-function neuron = run_cnmfe_matlab_jjm(nam, gSig, gSiz, Fs, plot)
+function neuron = run_cnmfe_matlab_jjm(nam, gSig, gSiz, Fs, ssub, plot)
     %% inputs
     % gSig : pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
     % gSiz : pixel, neuron diameter
     % Fs : frame rate
+    % ssub: spatial_downsampling_factor 
     % plot : true or false, whether to plot contours at end of run
 
     %% make a sources object to store results
@@ -14,14 +15,14 @@ function neuron = run_cnmfe_matlab_jjm(nam, gSig, gSiz, Fs, plot)
 
     %% parameters
     % -------------------------    COMPUTATION    -------------------------  %
-    pars_envs = struct('memory_size_to_use', 20, ...   % GB, memory space you allow to use in MATLAB
-        'memory_size_per_patch', 5, ...   % GB, space for loading data within one patch
+    pars_envs = struct('memory_size_to_use', 50, ...   % GB, memory space you allow to use in MATLAB
+        'memory_size_per_patch', 4, ...   % GB, space for loading data within one patch
         'patch_dims', [64, 64]);  %GB, patch size
 
     % -------------------------      SPATIAL      -------------------------  %
     %gSig = 3;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
     %gSiz = 10;          % pixel, neuron diameter
-    ssub = 1;           % spatial downsampling factor
+    %ssub = 1;           % spatial downsampling factor
     with_dendrites = true;   % with dendrites or not
     if with_dendrites
         % determine the search locations by dilating the current neuron shapes

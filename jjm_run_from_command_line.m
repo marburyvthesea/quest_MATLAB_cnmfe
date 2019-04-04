@@ -1,6 +1,25 @@
-% path to tiff or hdf5 file
 
-file_to_analyze = '/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/caiman_analysis/memmap_0008_d1_480_d2_752_d3_1_order_C_frames_1000__resized.h5' ;
+% get cnmfe params, change to numberic values
+% path to tiff or hdf5 file
+%file_to_analyze 
+gSig = str2num(gSig) ; 
+gSiz = str2num(gSiz) ; 
+Fs = str2num(Fs) ;
+ssub = str2num(ssub) ;  
+
+
+%find all appropriate hdf files in the folder
+disp('this is the folder path')
+disp(folder_path) 
+disp('number of frames in each batch:')
+disp(batch_frames_num)
+disp('gSig:')
+disp(gSig)
+disp('gSiz:')
+disp(gSiz)
+disp('Spatial downsampling factor:')
+disp(ssub)
+
 
 % add file to path and CNMFE repositories
 
@@ -11,6 +30,6 @@ addpath(genpath('/projects/p30771/MATLAB/CNMF_E')) ;
 
 cd('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe');
 
-run_cnmfe_matlab_jjm(file_to_analyze, 13, 40, 20, false) ;
+run_cnmfe_matlab_jjm(file_to_analyze, gSig, gSiz, Fs, ssub, false) ;
 
 disp('finished cnmfe run') 
