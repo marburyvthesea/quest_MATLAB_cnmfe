@@ -49,6 +49,9 @@ disp('running cnmfe')
 %call batch_run.m to start batch CNMF_E
 %run_cnmfe_batch_matlab_jjm(nams, 13, 40, 20, false)
 
+%double(gSig)
+disp(gSig^2)
+
 demo_batch_1p_jjm_2
 
 
