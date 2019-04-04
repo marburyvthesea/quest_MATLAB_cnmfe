@@ -14,7 +14,7 @@ FOLDER_path=$1
 
 # other parameters for CNMF_E
 
-NUM_frames_per_batch=5000 
+NUM_frames_per_batch=2000 
 INPUT_gSig=13 
 INPUT_gSiz=40
 INPUT_Fs=20
@@ -44,3 +44,4 @@ cd /projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe
 matlab -nosplash -nodesktop -r "folder_path='$FOLDER_path';batch_frames_num='$NUM_frames_per_batch';gSig='$INPUT_gSig';gSiz='$INPUT_gSiz';Fs='$INPUT_Fs';ssub='$INPUT_ssub';disp(folder_path);run('get_data_from_folder_run_batch.m');exit;"
 
 
+:
