@@ -10,7 +10,7 @@ ssub = str2num(ssub) ;
 
 %find all appropriate hdf files in the folder
 disp('this is the folder path')
-disp(folder_path) 
+disp(file_to_analyze) 
 disp('number of frames in each batch:')
 disp(batch_frames_num)
 disp('gSig:')
