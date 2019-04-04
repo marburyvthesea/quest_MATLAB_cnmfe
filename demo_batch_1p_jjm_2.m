@@ -1,6 +1,13 @@
 %% clear the workspace and select data 
 %clear; clc; close all; 
 
+%before running need to declare the following variables
+% nams - cell array of files to run
+% batch_frames_num = number of frames in each movie batch
+% gSig
+% gSiz
+% Fs 
+
 %% choose multiple datasets or just one  
 neuron = Sources2D(); 
 %nams = {'./data_1p.tif'};          % you can put all file names into a cell array; when it's empty, manually select files 
@@ -10,12 +17,12 @@ nams = neuron.select_multiple_files(nams);  %if nam is [], then select data inte
 %% parameters  
 % -------------------------    COMPUTATION    -------------------------  %
 pars_envs = struct('memory_size_to_use', 8, ...   % GB, memory space you allow to use in MATLAB 
-    'memory_size_per_patch', 0.5, ...   % GB, space for loading data within one patch 
+    'memory_size_per_patch', 20, ...   % GB, space for loading data within one patch 
     'patch_dims', [64, 64],...  %GB, patch size 
-    'batch_frames', 1000);           % number of frames per batch 
+    'batch_frames', batch_frames_num);           % number of frames per batch 
   % -------------------------      SPATIAL      -------------------------  %
-gSig = 13;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
-gSiz = 40;          % pixel, neuron diameter
+%gSig = 13;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
+%gSiz = 40;          % pixel, neuron diameter
 ssub = 1;           % spatial downsampling factor
 with_dendrites = true;   % with dendrites or not
 if with_dendrites
@@ -33,7 +40,7 @@ spatial_constraints = struct('connected', true, 'circular', false);  % you can i
 spatial_algorithm = 'hals';
 
 % -------------------------      TEMPORAL     -------------------------  %
-Fs = 10;             % frame rate
+%Fs = 10;             % frame rate
 tsub = 1;           % temporal downsampling factor
 deconv_options = struct('type', 'ar1', ... % model of the calcium traces. {'ar1', 'ar2'}
     'method', 'foopsi', ... % method for running deconvolution {'foopsi', 'constrained', 'thresholded'}
