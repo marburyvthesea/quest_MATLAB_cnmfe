@@ -1,6 +1,8 @@
 %batch_run_with_input_data_jjm_script
 %input variable is folder path to find files
 
+gSig = 13 ;
+
 %find all appropriate hdf files in the folder
 disp('this is the folder path')
 disp(folder_path) 
@@ -49,8 +51,6 @@ disp('running cnmfe')
 %call batch_run.m to start batch CNMF_E
 %run_cnmfe_batch_matlab_jjm(nams, 13, 40, 20, false)
 
-gSig = double(gSig);
-disp(gSig^2)
 
 demo_batch_1p_jjm_2
 
