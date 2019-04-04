@@ -41,10 +41,10 @@ cnmfe_setup
 
 disp('running cnmfe')
 % define cnmfe run params
-batch_frames_num = 5000 ; 
-gSig = 13 ; 
-gSiz = 40 ; 
-Fs = 20 ;  
+%batch_frames_num = 5000 ; 
+%gSig = 13 ; 
+%gSiz = 40 ; 
+%Fs = 20 ;  
 
 %call batch_run.m to start batch CNMF_E
 %run_cnmfe_batch_matlab_jjm(nams, 13, 40, 20, false)
