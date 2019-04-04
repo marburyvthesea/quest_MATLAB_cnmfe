@@ -35,6 +35,6 @@ cd /projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe
 # matlab -nosplash -nodesktop -r "folder_path=$FOLDER_path;disp(folder_path);run('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/batch_run_with_input_data_jjm_script(folder_path)');exit;"
 # 
 
-matlab -nosplash -nodesktop -r "folder_path='$FOLDER_path';batch_frames_num='$NUM_frames';disp(folder_path);run('get_data_from_folder_run_batch.m');exit;"
+matlab -nosplash -nodesktop -r "folder_path='$FOLDER_path';batch_frames_num='$NUM_frames';disp(folder_path);run('get_data_from_folder_run_batch_small.m');exit;"
 
 
