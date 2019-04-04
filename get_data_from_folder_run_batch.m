@@ -30,7 +30,7 @@ addpath('/projects/p30771/MATLAB/CNMF_E/') ;
 
 disp('running cnmfe')
 % define cnmfe run params
-batch_frames_num = 5000 ; 
+batch_frames_num = 2000 ; 
 gSig = 13 ; 
 gSiz = 40 ; 
 Fs = 20 ;  
