@@ -26,7 +26,7 @@ disp(nams)
 addpath(folder_path)
 
 
-addpath('/projects/p30771/MATLAB/CNMF_E/') ;
+addpath(genpath('/projects/p30771/MATLAB/CNMF_E/')) ;
 
 disp('running cnmfe')
 % define cnmfe run params
