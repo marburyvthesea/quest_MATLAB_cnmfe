@@ -1,7 +1,13 @@
 %batch_run_with_input_data_jjm_script
 %input variable is folder path to find files
 
-gSig = 13 ;
+% define cnmfe run params
+batch_frames_num = 5000 ; 
+gSig = 13 ; 
+gSiz = 40 ; 
+Fs = 20 ;
+ssub = 2 ;  
+
 
 %find all appropriate hdf files in the folder
 disp('this is the folder path')
@@ -42,11 +48,7 @@ addpath(genpath('/projects/p30771/MATLAB/CNMF_E/')) ;
 cnmfe_setup
 
 disp('running cnmfe')
-% define cnmfe run params
-%batch_frames_num = 5000 ; 
-%gSig = 13 ; 
-%gSiz = 40 ; 
-%Fs = 20 ;  
+
 
 %call batch_run.m to start batch CNMF_E
 %run_cnmfe_batch_matlab_jjm(nams, 13, 40, 20, false)
