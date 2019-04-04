@@ -16,8 +16,8 @@ nams = neuron.select_multiple_files(nams);  %if nam is [], then select data inte
 
 %% parameters  
 % -------------------------    COMPUTATION    -------------------------  %
-pars_envs = struct('memory_size_to_use', 8, ...   % GB, memory space you allow to use in MATLAB 
-    'memory_size_per_patch', 20, ...   % GB, space for loading data within one patch 
+pars_envs = struct('memory_size_to_use', 50, ...   % GB, memory space you allow to use in MATLAB 
+    'memory_size_per_patch', 5, ...   % GB, space for loading data within one patch 
     'patch_dims', [64, 64],...  %GB, patch size 
     'batch_frames', batch_frames_num);           % number of frames per batch 
   % -------------------------      SPATIAL      -------------------------  %
