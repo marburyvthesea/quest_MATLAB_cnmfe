@@ -17,7 +17,7 @@ disp(num_files)
 files_array = {} ;
 for i = 1:num_files 
 	disp(i)
-	files_array{i,1} = file_names{1,i} ; 
+	files_array{i,1} = strcat(folder_path, '/', file_names{1,i}) ; 
 end
 
 nams = files_array ; 
