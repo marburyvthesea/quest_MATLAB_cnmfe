@@ -4,12 +4,9 @@
 % have cell array of matlab output files
 
 
-files_array = {'/Volumes/My_Passport/MiniscopeMovies/3_9_2019/H13_M33_S54/questanalysisrun/memmap_0000memmap_0004_resized_source_extraction/frames_1_5000/LOGS_06-Apr_14_09_13/06-Apr_15_02_43.mat' ; 
-    '/Volumes/My_Passport/MiniscopeMovies/3_9_2019/H13_M33_S54/questanalysisrun/memmap_0005memmap_0009_resized_source_extraction/frames_1_5000/LOGS_06-Apr_14_10_08/06-Apr_14_39_54.mat' ;
-    '/Volumes/My_Passport/MiniscopeMovies/3_9_2019/H13_M33_S54/questanalysisrun/memmap_0010memmap_0014_resized_source_extraction/frames_1_5000/LOGS_06-Apr_14_09_36/06-Apr_14_35_09.mat' ;
-    '/Volumes/My_Passport/MiniscopeMovies/3_9_2019/H13_M33_S54/questanalysisrun/memmap_0015memmap_0019_resized_source_extraction/frames_1_5000/LOGS_06-Apr_14_11_09/06-Apr_14_49_48.mat' ;
-    '/Volumes/My_Passport/MiniscopeMovies/3_9_2019/H13_M33_S54/questanalysisrun/memmap_0020memmap_0024_resized_source_extraction/frames_1_5000/LOGS_06-Apr_14_10_04/06-Apr_14_40_37.mat' }		
-output_folder = '/Users/johnmarshall/Documents/MATLAB/CellReg/JJM_Data/3_9_2019_H13_M33_S54/'
+files_array = {'/Users/johnmarshall/Documents/MATLAB/miniscopemovieforanalysis/cellregtest/memmap_0000memmap_0000_resized_source_extraction/frames_1_101/LOGS_15-Apr_18_05_16/15-Apr_18_11_57.mat' ;
+    '/Users/johnmarshall/Documents/MATLAB/miniscopemovieforanalysis/cellregtest/memmap_0001memmap_0001_resized_source_extraction/frames_1_101/LOGS_15-Apr_18_06_56/15-Apr_18_11_35.mat' }		
+output_folder = '/Users/johnmarshall/Documents/MATLAB/CellReg/JJM_Data/GRIN011_substack_tests/'
 
 s_f = size(files_array)
 

@@ -17,6 +17,9 @@ disp('gSiz:')
 disp(gSiz)
 disp('Spatial downsampling factor:')
 disp(ssub)
+disp('Parallel processing enabled')
+disp(parallel_enable)
+
 
 
 % add file to path and CNMFE repositories
@@ -28,6 +31,6 @@ addpath(genpath('/projects/p30771/MATLAB/CNMF_E')) ;
 
 cd('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe');
 
-run_cnmfe_matlab_jjm(file_to_analyze, gSig, gSiz, Fs, ssub, false) ;
+run_cnmfe_matlab_jjm(file_to_analyze, gSig, gSiz, Fs, ssub, false, parallel_enable) ;
 
 disp('finished cnmfe run') 

@@ -1,12 +1,15 @@
-function neuron = run_cnmfe_matlab_jjm(nam, gSig, gSiz, Fs, ssub, plot)
+function neuron = run_cnmfe_matlab_jjm(nam, gSig, gSiz, Fs, ssub, plot, parallel_enable)
     %% inputs
     % gSig : pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
     % gSiz : pixel, neuron diameter
     % Fs : frame rate
     % ssub: spatial_downsampling_factor 
     % plot : true or false, whether to plot contours at end of run
-    disp('downsampling factor');
-    disp(ssub);	
+    % parallel_enable : true or false, whether to use parallel processing 
+    disp('downsampling factor')
+    disp(ssub)
+    disp('parallel processing enabled')
+    disp(parallel_enable)
 
     %% make a sources object to store results
     neuron = Sources2D();
@@ -78,7 +81,7 @@ function neuron = run_cnmfe_matlab_jjm(nam, gSig, gSiz, Fs, ssub, plot)
     bd = 0;             % number of rows/columns to be ignored in the boundary (mainly for motion corrected data)
     frame_range = [];   % when [], uses all frames
     save_initialization = false;    % save the initialization procedure as a video.
-    use_parallel = true;    % use parallel computation for parallel computing
+    use_parallel = parallel_enable;    % use parallel computation for parallel computing
     show_init = false;   % show initialization results
     center_psf = true;  % set the value as true when the background fluctuation is large (usually 1p data)
     % set the value as false when the background fluctuation is small (2p)
