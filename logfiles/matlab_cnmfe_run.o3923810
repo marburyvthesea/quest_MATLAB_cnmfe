@@ -1,0 +1,1105 @@
+----------------------------------------
+PBS: Begin PBS Prologue Thu Mar 28 21:51:21 CDT 2019 1553827881
+PBS: Job ID:		3923810.qsched03.quest.it.northwestern.edu
+PBS: Username:		jma819
+PBS: Group:		jma819
+PBS: Executing queue:     short
+PBS: Job name:		matlab_cnmfe_run
+PBS: Account:		p30771
+----------------------------------------
+   The following variables are not
+   guaranteed to be the same in 
+   prologue and the job run script  
+----------------------------------------
+PBS: Temporary Dir($TMPDIR):	/tmp/3923810.qsched03.quest.it.northwestern.edu
+PBS: Master Node($PBS_MSHOST):		qnode5013
+PBS: node file($PBS_NODEFILE):  /hpc/opt/torque6/nodes/qnode5013/aux//3923810.qsched03.quest.it.northwestern.edu
+PBS: PATH (in prologue) : /bin:/usr/bin
+PBS: WORKDIR ($PBS_O_WORKDIR) is:  /projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe
+----------------------------------------
+PBS: End PBS Prologue Thu Mar 28 21:51:21 CDT 2019 1553827881
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Name is nonexistent or not a directory:
+/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/caiman_analysis/memmap_0008_d1_480_d2_752_d3_1_order_C_frames_1000__resized.h5] 
+[> In path (line 109)
+  In addpath (line 96)
+  In jjm_run_from_command_line (line 7)
+  In run (line 91)] 
+[Warning: Function narginchk has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 96)
+  In jjm_run_from_command_line (line 8)
+  In run (line 91)] 
+
+The data has 752 X 480 pixels X 1000 frames. 
+Loading all data (double precision) requires 2.689 GB RAM
+
+The FOV is divided into 6 X 4 patches. 
+Each patch has 115 X 120 pixels. 
+It requires 0.384 GB RAM for loading data related to each patch. 
+
+Finished reading images
+
+-------- Loading --------
+Data is being loaded and distributed into multiple small blocks for easy access.
+
+Finished reading images
+block( 1, 1)/(13, 9) done
+block( 1, 2)/(13, 9) done
+block( 1, 3)/(13, 9) done
+block( 1, 4)/(13, 9) done
+block( 1, 5)/(13, 9) done
+block( 1, 6)/(13, 9) done
+block( 1, 7)/(13, 9) done
+block( 1, 8)/(13, 9) done
+block( 1, 9)/(13, 9) done
+block( 2, 1)/(13, 9) done
+block( 2, 2)/(13, 9) done
+block( 2, 3)/(13, 9) done
+block( 2, 4)/(13, 9) done
+block( 2, 5)/(13, 9) done
+block( 2, 6)/(13, 9) done
+block( 2, 7)/(13, 9) done
+block( 2, 8)/(13, 9) done
+block( 2, 9)/(13, 9) done
+block( 3, 1)/(13, 9) done
+block( 3, 2)/(13, 9) done
+block( 3, 3)/(13, 9) done
+block( 3, 4)/(13, 9) done
+block( 3, 5)/(13, 9) done
+block( 3, 6)/(13, 9) done
+block( 3, 7)/(13, 9) done
+block( 3, 8)/(13, 9) done
+block( 3, 9)/(13, 9) done
+block( 4, 1)/(13, 9) done
+block( 4, 2)/(13, 9) done
+block( 4, 3)/(13, 9) done
+block( 4, 4)/(13, 9) done
+block( 4, 5)/(13, 9) done
+block( 4, 6)/(13, 9) done
+block( 4, 7)/(13, 9) done
+block( 4, 8)/(13, 9) done
+block( 4, 9)/(13, 9) done
+block( 5, 1)/(13, 9) done
+block( 5, 2)/(13, 9) done
+block( 5, 3)/(13, 9) done
+block( 5, 4)/(13, 9) done
+block( 5, 5)/(13, 9) done
+block( 5, 6)/(13, 9) done
+block( 5, 7)/(13, 9) done
+block( 5, 8)/(13, 9) done
+block( 5, 9)/(13, 9) done
+block( 6, 1)/(13, 9) done
+block( 6, 2)/(13, 9) done
+block( 6, 3)/(13, 9) done
+block( 6, 4)/(13, 9) done
+block( 6, 5)/(13, 9) done
+block( 6, 6)/(13, 9) done
+block( 6, 7)/(13, 9) done
+block( 6, 8)/(13, 9) done
+block( 6, 9)/(13, 9) done
+block( 7, 1)/(13, 9) done
+block( 7, 2)/(13, 9) done
+block( 7, 3)/(13, 9) done
+block( 7, 4)/(13, 9) done
+block( 7, 5)/(13, 9) done
+block( 7, 6)/(13, 9) done
+block( 7, 7)/(13, 9) done
+block( 7, 8)/(13, 9) done
+block( 7, 9)/(13, 9) done
+block( 8, 1)/(13, 9) done
+block( 8, 2)/(13, 9) done
+block( 8, 3)/(13, 9) done
+block( 8, 4)/(13, 9) done
+block( 8, 5)/(13, 9) done
+block( 8, 6)/(13, 9) done
+block( 8, 7)/(13, 9) done
+block( 8, 8)/(13, 9) done
+block( 8, 9)/(13, 9) done
+block( 9, 1)/(13, 9) done
+block( 9, 2)/(13, 9) done
+block( 9, 3)/(13, 9) done
+block( 9, 4)/(13, 9) done
+block( 9, 5)/(13, 9) done
+block( 9, 6)/(13, 9) done
+block( 9, 7)/(13, 9) done
+block( 9, 8)/(13, 9) done
+block( 9, 9)/(13, 9) done
+block(10, 1)/(13, 9) done
+block(10, 2)/(13, 9) done
+block(10, 3)/(13, 9) done
+block(10, 4)/(13, 9) done
+block(10, 5)/(13, 9) done
+block(10, 6)/(13, 9) done
+block(10, 7)/(13, 9) done
+block(10, 8)/(13, 9) done
+block(10, 9)/(13, 9) done
+block(11, 1)/(13, 9) done
+block(11, 2)/(13, 9) done
+block(11, 3)/(13, 9) done
+block(11, 4)/(13, 9) done
+block(11, 5)/(13, 9) done
+block(11, 6)/(13, 9) done
+block(11, 7)/(13, 9) done
+block(11, 8)/(13, 9) done
+block(11, 9)/(13, 9) done
+block(12, 1)/(13, 9) done
+block(12, 2)/(13, 9) done
+block(12, 3)/(13, 9) done
+block(12, 4)/(13, 9) done
+block(12, 5)/(13, 9) done
+block(12, 6)/(13, 9) done
+block(12, 7)/(13, 9) done
+block(12, 8)/(13, 9) done
+block(12, 9)/(13, 9) done
+block(13, 1)/(13, 9) done
+block(13, 2)/(13, 9) done
+block(13, 3)/(13, 9) done
+block(13, 4)/(13, 9) done
+block(13, 5)/(13, 9) done
+block(13, 6)/(13, 9) done
+block(13, 7)/(13, 9) done
+block(13, 8)/(13, 9) done
+block(13, 9)/(13, 9) done
+loaded 1000 out of 1000 frames
+
+The data has been saved into 
+/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/caiman_analysis/memmap_0008_d1_480_d2_752_d3_1_order_C_frames_1000__resized_source_extraction/data_115_115_56.mat
+
+-------- Done --------
+estimating the nosie level for every pixel.......
+Time cost for estimating the nosie levels:  31.476 
+
+Starting parallel pool (parpool) using the 'local' profile ...
+connected to 12 workers.
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+Warning: File: /projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a future release, to share "h" between parent and nested functions, explicitly define it in the parent function.
+> In deconvolveCa (line 120)
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+20 neurons have been detected
+20 neurons have been detected
+20 neurons have been detected
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+20 neurons have been detected
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+20 neurons have been detected
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+20 neurons have been detected
+  In greedyROI_endoscope (line 357)
+  In parallel_function>make_general_channel/channel_general (line 917)
+  In remoteParallelFunction (line 46)
+10 neurons have been detected
+30 neurons have been detected
+20 neurons have been detected
+30 neurons have been detected
+30 neurons have been detected
+30 neurons have been detected
+20 neurons have been detected
+30 neurons have been detected
+20 neurons have been detected
+20 neurons have been detected
+20 neurons have been detected
+20 neurons have been detected
+30 neurons have been detected
+40 neurons have been detected
+30 neurons have been detected
+40 neurons have been detected
+40 neurons have been detected
+30 neurons have been detected
+40 neurons have been detected
+30 neurons have been detected
+40 neurons have been detected
+30 neurons have been detected
+40 neurons have been detected
+30 neurons have been detected
+50 neurons have been detected
+30 neurons have been detected
+50 neurons have been detected
+50 neurons have been detected
+40 neurons have been detected
+40 neurons have been detected
+50 neurons have been detected
+40 neurons have been detected
+50 neurons have been detected
+40 neurons have been detected
+50 neurons have been detected
+40 neurons have been detected
+60 neurons have been detected
+40 neurons have been detected
+50 neurons have been detected
+50 neurons have been detected
+60 neurons have been detected
+60 neurons have been detected
+50 neurons have been detected
+60 neurons have been detected
+60 neurons have been detected
+50 neurons have been detected
+50 neurons have been detected
+Patch ( 1,  1) is done.  6 X  4 patches in total. 
+60 neurons have been detected
+50 neurons have been detected
+70 neurons have been detected
+60 neurons have been detected
+60 neurons have been detected
+70 neurons have been detected
+60 neurons have been detected
+70 neurons have been detected
+70 neurons have been detected
+80 neurons have been detected
+60 neurons have been detected
+60 neurons have been detected
+60 neurons have been detected
+70 neurons have been detected
+80 neurons have been detected
+Patch ( 6,  1) is done.  6 X  4 patches in total. 
+70 neurons have been detected
+70 neurons have been detected
+80 neurons have been detected
+70 neurons have been detected
+80 neurons have been detected
+90 neurons have been detected
+80 neurons have been detected
+70 neurons have been detected
+70 neurons have been detected
+70 neurons have been detected
+80 neurons have been detected
+80 neurons have been detected
+80 neurons have been detected
+90 neurons have been detected
+100 neurons have been detected
+90 neurons have been detected
+90 neurons have been detected
+80 neurons have been detected
+90 neurons have been detected
+80 neurons have been detected
+90 neurons have been detected
+80 neurons have been detected
+10 neurons have been detected
+90 neurons have been detected
+100 neurons have been detected
+100 neurons have been detected
+110 neurons have been detected
+100 neurons have been detected
+90 neurons have been detected
+100 neurons have been detected
+90 neurons have been detected
+100 neurons have been detected
+90 neurons have been detected
+20 neurons have been detected
+100 neurons have been detected
+110 neurons have been detected
+120 neurons have been detected
+110 neurons have been detected
+30 neurons have been detected
+110 neurons have been detected
+100 neurons have been detected
+100 neurons have been detected
+110 neurons have been detected
+100 neurons have been detected
+Patch ( 1,  2) is done.  6 X  4 patches in total. 
+10 neurons have been detected
+110 neurons have been detected
+130 neurons have been detected
+120 neurons have been detected
+120 neurons have been detected
+40 neurons have been detected
+120 neurons have been detected
+110 neurons have been detected
+120 neurons have been detected
+110 neurons have been detected
+110 neurons have been detected
+120 neurons have been detected
+140 neurons have been detected
+20 neurons have been detected
+130 neurons have been detected
+130 neurons have been detected
+50 neurons have been detected
+120 neurons have been detected
+120 neurons have been detected
+120 neurons have been detected
+130 neurons have been detected
+130 neurons have been detected
+130 neurons have been detected
+150 neurons have been detected
+30 neurons have been detected
+Patch ( 6,  2) is done.  6 X  4 patches in total. 
+140 neurons have been detected
+60 neurons have been detected
+140 neurons have been detected
+10 neurons have been detected
+130 neurons have been detected
+130 neurons have been detected
+140 neurons have been detected
+140 neurons have been detected
+40 neurons have been detected
+140 neurons have been detected
+160 neurons have been detected
+70 neurons have been detected
+150 neurons have been detected
+Patch ( 5,  1) is done.  6 X  4 patches in total. 
+20 neurons have been detected
+150 neurons have been detected
+Patch ( 2,  1) is done.  6 X  4 patches in total. 
+140 neurons have been detected
+140 neurons have been detected
+150 neurons have been detected
+50 neurons have been detected
+170 neurons have been detected
+Patch ( 4,  1) is done.  6 X  4 patches in total. 
+150 neurons have been detected
+80 neurons have been detected
+30 neurons have been detected
+160 neurons have been detected
+150 neurons have been detected
+150 neurons have been detected
+160 neurons have been detected
+Patch ( 3,  1) is done.  6 X  4 patches in total. 
+60 neurons have been detected
+90 neurons have been detected
+40 neurons have been detected
+160 neurons have been detected
+10 neurons have been detected
+160 neurons have been detected
+160 neurons have been detected
+170 neurons have been detected
+70 neurons have been detected
+50 neurons have been detected
+100 neurons have been detected
+170 neurons have been detected
+20 neurons have been detected
+170 neurons have been detected
+170 neurons have been detected
+60 neurons have been detected
+80 neurons have been detected
+180 neurons have been detected
+30 neurons have been detected
+110 neurons have been detected
+180 neurons have been detected
+10 neurons have been detected
+180 neurons have been detected
+180 neurons have been detected
+10 neurons have been detected
+40 neurons have been detected
+Patch ( 1,  4) is done.  6 X  4 patches in total. 
+90 neurons have been detected
+190 neurons have been detected
+10 neurons have been detected
+120 neurons have been detected
+190 neurons have been detected
+20 neurons have been detected
+190 neurons have been detected
+20 neurons have been detected
+190 neurons have been detected
+50 neurons have been detected
+200 neurons have been detected
+100 neurons have been detected
+10 neurons have been detected
+20 neurons have been detected
+200 neurons have been detected
+30 neurons have been detected
+30 neurons have been detected
+130 neurons have been detected
+200 neurons have been detected
+60 neurons have been detected
+Patch ( 1,  3) is done.  6 X  4 patches in total. 
+Patch ( 5,  2) is done.  6 X  4 patches in total. 
+200 neurons have been detected
+110 neurons have been detected
+30 neurons have been detected
+210 neurons have been detected
+20 neurons have been detected
+40 neurons have been detected
+40 neurons have been detected
+70 neurons have been detected
+210 neurons have been detected
+210 neurons have been detected
+120 neurons have been detected
+40 neurons have been detected
+30 neurons have been detected
+50 neurons have been detected
+50 neurons have been detected
+220 neurons have been detected
+80 neurons have been detected
+220 neurons have been detected
+130 neurons have been detected
+Patch ( 2,  2) is done.  6 X  4 patches in total. 
+50 neurons have been detected
+60 neurons have been detected
+40 neurons have been detected
+60 neurons have been detected
+230 neurons have been detected
+Patch ( 6,  3) is done.  6 X  4 patches in total. 
+90 neurons have been detected
+60 neurons have been detected
+230 neurons have been detected
+10 neurons have been detected
+50 neurons have been detected
+70 neurons have been detected
+Patch ( 6,  4) is done.  6 X  4 patches in total. 
+70 neurons have been detected
+240 neurons have been detected
+20 neurons have been detected
+70 neurons have been detected
+60 neurons have been detected
+240 neurons have been detected
+Patch ( 4,  2) is done.  6 X  4 patches in total. 
+80 neurons have been detected
+80 neurons have been detected
+30 neurons have been detected
+70 neurons have been detected
+80 neurons have been detected
+250 neurons have been detected
+Patch ( 3,  2) is done.  6 X  4 patches in total. 
+10 neurons have been detected
+40 neurons have been detected
+90 neurons have been detected
+90 neurons have been detected
+80 neurons have been detected
+90 neurons have been detected
+20 neurons have been detected
+100 neurons have been detected
+50 neurons have been detected
+100 neurons have been detected
+100 neurons have been detected
+30 neurons have been detected
+90 neurons have been detected
+110 neurons have been detected
+110 neurons have been detected
+60 neurons have been detected
+10 neurons have been detected
+110 neurons have been detected
+40 neurons have been detected
+100 neurons have been detected
+120 neurons have been detected
+20 neurons have been detected
+70 neurons have been detected
+120 neurons have been detected
+10 neurons have been detected
+120 neurons have been detected
+50 neurons have been detected
+110 neurons have been detected
+130 neurons have been detected
+80 neurons have been detected
+20 neurons have been detected
+30 neurons have been detected
+130 neurons have been detected
+130 neurons have been detected
+60 neurons have been detected
+120 neurons have been detected
+40 neurons have been detected
+30 neurons have been detected
+90 neurons have been detected
+140 neurons have been detected
+140 neurons have been detected
+140 neurons have been detected
+70 neurons have been detected
+50 neurons have been detected
+130 neurons have been detected
+40 neurons have been detected
+100 neurons have been detected
+150 neurons have been detected
+150 neurons have been detected
+80 neurons have been detected
+150 neurons have been detected
+60 neurons have been detected
+50 neurons have been detected
+140 neurons have been detected
+110 neurons have been detected
+160 neurons have been detected
+160 neurons have been detected
+90 neurons have been detected
+160 neurons have been detected
+70 neurons have been detected
+60 neurons have been detected
+150 neurons have been detected
+120 neurons have been detected
+170 neurons have been detected
+100 neurons have been detected
+170 neurons have been detected
+170 neurons have been detected
+80 neurons have been detected
+70 neurons have been detected
+160 neurons have been detected
+Patch ( 5,  4) is done.  6 X  4 patches in total. 
+180 neurons have been detected
+110 neurons have been detected
+180 neurons have been detected
+90 neurons have been detected
+180 neurons have been detected
+80 neurons have been detected
+170 neurons have been detected
+120 neurons have been detected
+190 neurons have been detected
+190 neurons have been detected
+100 neurons have been detected
+90 neurons have been detected
+190 neurons have been detected
+Patch ( 2,  4) is done.  6 X  4 patches in total. 
+180 neurons have been detected
+200 neurons have been detected
+Patch ( 5,  3) is done.  6 X  4 patches in total. 
+200 neurons have been detected
+110 neurons have been detected
+100 neurons have been detected
+190 neurons have been detected
+200 neurons have been detected
+120 neurons have been detected
+210 neurons have been detected
+110 neurons have been detected
+200 neurons have been detected
+210 neurons have been detected
+130 neurons have been detected
+220 neurons have been detected
+120 neurons have been detected
+210 neurons have been detected
+Patch ( 4,  3) is done.  6 X  4 patches in total. 
+220 neurons have been detected
+Patch ( 2,  3) is done.  6 X  4 patches in total. 
+140 neurons have been detected
+130 neurons have been detected
+220 neurons have been detected
+Patch ( 4,  4) is done.  6 X  4 patches in total. 
+Patch ( 3,  4) is done.  6 X  4 patches in total. 
+230 neurons have been detected
+Patch ( 3,  3) is done.  6 X  4 patches in total. 
+
+-----------------UPDATE BACKGROUND---------------------------
+Patch ( 1,  1) is done.  6 X  4 patches in total. 
+Patch ( 2,  1) is done.  6 X  4 patches in total. 
+Patch ( 5,  1) is done.  6 X  4 patches in total. 
+Patch ( 4,  1) is done.  6 X  4 patches in total. 
+Patch ( 3,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  2) is done.  6 X  4 patches in total. 
+Patch ( 4,  2) is done.  6 X  4 patches in total. 
+Patch ( 3,  2) is done.  6 X  4 patches in total. 
+Patch ( 5,  2) is done.  6 X  4 patches in total. 
+Patch ( 2,  2) is done.  6 X  4 patches in total. 
+Patch ( 6,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  3) is done.  6 X  4 patches in total. 
+Patch ( 6,  2) is done.  6 X  4 patches in total. 
+Patch ( 1,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  3) is done.  6 X  4 patches in total. 
+Patch ( 5,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  4) is done.  6 X  4 patches in total. 
+Patch ( 3,  4) is done.  6 X  4 patches in total. 
+Patch ( 5,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  4) is done.  6 X  4 patches in total. 
+Patch ( 3,  3) is done.  6 X  4 patches in total. 
+Patch ( 6,  4) is done.  6 X  4 patches in total. 
+Patch ( 6,  3) is done.  6 X  4 patches in total. 
+Finished updating background using ring model.
+-------------MERGE HIGHLY CORRELATED CLOSE-BY NEURONS----------
+
+10 neurons will be merged into 5 new neurons
+
+[Warning: File:
+/projects/p30771/MATLAB/CNMF_E/OASIS_matlab/packages/oasis/foopsi_oasisAR1.m
+Line: 166 Column: 9
+Defining "h" in the nested function shares it with the parent function.  In a
+future release, to share "h" between parent and nested functions, explicitly
+define it in the parent function.] 
+[> In deconvolveCa (line 120)
+  In Sources2D/merge_neurons_dist_corr (line 194)
+  In run_cnmfe_matlab_jjm (line 148)
+  In jjm_run_from_command_line (line 14)
+  In run (line 91)] 
+Deleted 5 neurons: 374, 597, 629, 661, 924, 
+-------------MERGE HIGHLY CORRELATED NEURONS----------
+
+12 neurons will be merged into 6 new neurons
+
+Deleted 6 neurons: 146, 393, 680, 738, 761, 824, 
+
+-----------------UPDATE SPATIAL---------------------------
+Patch ( 1,  1) is done.  6 X  4 patches in total. 
+Patch ( 2,  1) is done.  6 X  4 patches in total. 
+Patch ( 5,  1) is done.  6 X  4 patches in total. 
+Patch ( 4,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  2) is done.  6 X  4 patches in total. 
+Patch ( 3,  1) is done.  6 X  4 patches in total. 
+Patch ( 4,  2) is done.  6 X  4 patches in total. 
+Patch ( 6,  1) is done.  6 X  4 patches in total. 
+Patch ( 2,  2) is done.  6 X  4 patches in total. 
+Patch ( 5,  2) is done.  6 X  4 patches in total. 
+Patch ( 3,  2) is done.  6 X  4 patches in total. 
+Patch ( 6,  2) is done.  6 X  4 patches in total. 
+Patch ( 1,  3) is done.  6 X  4 patches in total. 
+Patch ( 1,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  3) is done.  6 X  4 patches in total. 
+Patch ( 5,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  4) is done.  6 X  4 patches in total. 
+Patch ( 5,  4) is done.  6 X  4 patches in total. 
+Patch ( 3,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  4) is done.  6 X  4 patches in total. 
+Patch ( 6,  3) is done.  6 X  4 patches in total. 
+Patch ( 6,  4) is done.  6 X  4 patches in total. 
+Collect results from all small patches...
+Post-process spatial components of all neurons...
+Done!
+Done!
+Update the constant baselines for all pixels..
+Done!
+-------------MERGE HIGHLY CORRELATED NEURONS----------
+
+All pairs of neurons are below the merging criterion!
+
+
+-----------------UPDATE TEMPORAL---------------------------
+Patch ( 1,  1) is done.  6 X  4 patches in total. 
+Patch ( 6,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  2) is done.  6 X  4 patches in total. 
+Patch ( 1,  4) is done.  6 X  4 patches in total. 
+Patch ( 6,  2) is done.  6 X  4 patches in total. 
+Patch ( 2,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  3) is done.  6 X  4 patches in total. 
+Patch ( 2,  2) is done.  6 X  4 patches in total. 
+Patch ( 3,  1) is done.  6 X  4 patches in total. 
+Patch ( 4,  1) is done.  6 X  4 patches in total. 
+Patch ( 5,  2) is done.  6 X  4 patches in total. 
+Patch ( 5,  1) is done.  6 X  4 patches in total. 
+Patch ( 3,  2) is done.  6 X  4 patches in total. 
+Patch ( 4,  2) is done.  6 X  4 patches in total. 
+Patch ( 6,  3) is done.  6 X  4 patches in total. 
+Patch ( 2,  4) is done.  6 X  4 patches in total. 
+Patch ( 6,  4) is done.  6 X  4 patches in total. 
+Patch ( 5,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  4) is done.  6 X  4 patches in total. 
+Patch ( 4,  4) is done.  6 X  4 patches in total. 
+Patch ( 5,  3) is done.  6 X  4 patches in total. 
+Collect results from all small patches...
+Deconvolve and denoise all temporal traces again...
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||
+.......
+.............
+.....................................
+..........................
+..................................
+...............................................................
+.....................................................
+.................................................
+........................
+....
+........................................................................................
+.................................................................................
+..................................................................................................
+...................................................................................................
+......
+......
+............................................................................................
+.......................................................................................
+....
+.................................................................................................
+......................................................
+............................................................................
+..
+................
+
+Done!
+Update the constant baselines for all pixels..
+Done!
+Deleted 463 neurons:  5,  8, 10, 11, 12, 13, 16, 18, 22, 24, 26, 27, 28, 35, 37, 39, 40, 43, 44, 45, 47, 49, 50, 51, 56, 57, 58, 60, 65, 68, 69, 70, 71, 72, 75, 88, 93, 94, 98, 99, 100, 101, 103, 104, 105, 114, 115, 116, 117, 119, 120, 121, 122, 124, 125, 127, 128, 129, 150, 155, 160, 166, 168, 169, 172, 173, 174, 176, 178, 181, 182, 186, 199, 208, 210, 214, 215, 217, 218, 220, 225, 228, 229, 230, 231, 232, 237, 238, 239, 240, 241, 243, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 261, 262, 263, 264, 265, 266, 267, 275, 277, 278, 279, 282, 283, 284, 287, 288, 289, 290, 306, 307, 311, 312, 313, 318, 319, 320, 322, 323, 324, 325, 326, 327, 330, 332, 333, 334, 335, 337, 338, 339, 340, 341, 342, 344, 345, 347, 348, 349, 350, 351, 352, 353, 354, 362, 365, 369, 373, 382, 383, 384, 387, 389, 394, 395, 398, 400, 402, 403, 406, 409, 411, 412, 424, 425, 437, 447, 449, 451, 452, 459, 462, 463, 464, 470, 471, 472, 474, 475, 476, 477, 489, 496, 497, 500, 501, 505, 507, 509, 510, 519, 521, 523, 524, 527, 531, 533, 535, 543, 544, 545, 546, 547, 548, 550, 551, 552, 553, 554, 555, 556, 559, 560, 561, 562, 563, 565, 567, 570, 571, 573, 576, 578, 579, 580, 581, 582, 584, 585, 586, 589, 590, 591, 592, 593, 594, 595, 596, 598, 603, 604, 605, 606, 607, 610, 611, 612, 613, 614, 622, 625, 630, 636, 644, 645, 649, 651, 652, 653, 655, 656, 657, 659, 660, 663, 665, 666, 667, 668, 669, 670, 671, 672, 673, 674, 675, 676, 677, 691, 693, 694, 707, 709, 717, 718, 720, 721, 722, 723, 726, 727, 729, 732, 736, 755, 757, 759, 762, 764, 770, 773, 775, 776, 777, 779, 781, 782, 783, 786, 787, 788, 789, 793, 803, 807, 817, 818, 819, 822, 826, 827, 829, 831, 832, 833, 834, 836, 845, 859, 863, 864, 865, 872, 873, 877, 881, 887, 891, 892, 894, 895, 896, 902, 903, 904, 905, 906, 907, 908, 915, 916, 918, 919, 920, 921, 922, 923, 925, 928, 930, 931, 932, 933, 934, 936, 937, 938, 941, 942, 943, 944, 945, 956, 958, 959, 960, 961, 962, 963, 965, 967, 968, 970, 971, 974, 975, 978, 979, 981, 984, 985, 986, 988, 991, 992, 993, 994, 995, 1001, 1006, 1007, 1008, 1011, 1013, 1019, 1021, 1023, 1025, 1027, 1030, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1043, 1044, 1051, 1052, 1053, 1054, 1055, 1062, 1063, 1064, 1068, 1072, 1073, 1074, 1076, 1077, 1078, 1079, 1081, 1082, 1083, 1086, 1087, 1092, 1106, 1107, 1108, 1109, 1111, 1113, 1126, 1127, 
+-------------MERGE HIGHLY CORRELATED CLOSE-BY NEURONS----------
+
+8 neurons will be merged into 4 new neurons
+
+Deleted 4 neurons: 315, 654, 842, 1110, 
+
+-----------------UPDATE TEMPORAL---------------------------
+Patch ( 1,  2) is done.  6 X  4 patches in total. 
+Patch ( 6,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  4) is done.  6 X  4 patches in total. 
+Patch ( 1,  3) is done.  6 X  4 patches in total. 
+Patch ( 2,  2) is done.  6 X  4 patches in total. 
+Patch ( 2,  1) is done.  6 X  4 patches in total. 
+Patch ( 6,  2) is done.  6 X  4 patches in total. 
+Patch ( 5,  1) is done.  6 X  4 patches in total. 
+Patch ( 2,  4) is done.  6 X  4 patches in total. 
+Patch ( 3,  1) is done.  6 X  4 patches in total. 
+Patch ( 4,  1) is done.  6 X  4 patches in total. 
+Patch ( 6,  3) is done.  6 X  4 patches in total. 
+Patch ( 5,  2) is done.  6 X  4 patches in total. 
+Patch ( 3,  2) is done.  6 X  4 patches in total. 
+Patch ( 6,  4) is done.  6 X  4 patches in total. 
+Patch ( 5,  4) is done.  6 X  4 patches in total. 
+Patch ( 4,  2) is done.  6 X  4 patches in total. 
+Patch ( 5,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  4) is done.  6 X  4 patches in total. 
+Patch ( 4,  3) is done.  6 X  4 patches in total. 
+Collect results from all small patches...
+Deconvolve and denoise all temporal traces again...
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||||
+....
+.........................
+.............
+.................................
+............................................................
+.................
+..............
+.......................................................
+......
+........................................................
+.....................................................
+......
+...........
+..................................
+..................................................
+....................................................
+.................................................
+...................................................
+............................................................
+
+Done!
+Update the constant baselines for all pixels..
+Done!
+all components are good 
+-------------MERGE HIGHLY CORRELATED CLOSE-BY NEURONS----------
+
+All pairs of neurons are below the merging criterion!
+
+
+-----------------UPDATE BACKGROUND---------------------------
+Patch ( 1,  1) is done.  6 X  4 patches in total. 
+Patch ( 4,  1) is done.  6 X  4 patches in total. 
+Patch ( 3,  1) is done.  6 X  4 patches in total. 
+Patch ( 2,  1) is done.  6 X  4 patches in total. 
+Patch ( 5,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  2) is done.  6 X  4 patches in total. 
+Patch ( 2,  2) is done.  6 X  4 patches in total. 
+Patch ( 3,  2) is done.  6 X  4 patches in total. 
+Patch ( 4,  2) is done.  6 X  4 patches in total. 
+Patch ( 5,  2) is done.  6 X  4 patches in total. 
+Patch ( 6,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  3) is done.  6 X  4 patches in total. 
+Patch ( 6,  2) is done.  6 X  4 patches in total. 
+Patch ( 1,  4) is done.  6 X  4 patches in total. 
+Patch ( 4,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  3) is done.  6 X  4 patches in total. 
+Patch ( 2,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  4) is done.  6 X  4 patches in total. 
+Patch ( 5,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  4) is done.  6 X  4 patches in total. 
+Patch ( 5,  4) is done.  6 X  4 patches in total. 
+Patch ( 6,  3) is done.  6 X  4 patches in total. 
+Patch ( 6,  4) is done.  6 X  4 patches in total. 
+Finished updating background using ring model.
+
+-----------------UPDATE SPATIAL---------------------------
+Patch ( 1,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  2) is done.  6 X  4 patches in total. 
+Patch ( 2,  1) is done.  6 X  4 patches in total. 
+Patch ( 6,  1) is done.  6 X  4 patches in total. 
+Patch ( 3,  1) is done.  6 X  4 patches in total. 
+Patch ( 6,  2) is done.  6 X  4 patches in total. 
+Patch ( 4,  1) is done.  6 X  4 patches in total. 
+Patch ( 5,  1) is done.  6 X  4 patches in total. 
+Patch ( 2,  2) is done.  6 X  4 patches in total. 
+Patch ( 4,  2) is done.  6 X  4 patches in total. 
+Patch ( 3,  2) is done.  6 X  4 patches in total. 
+Patch ( 5,  2) is done.  6 X  4 patches in total. 
+Patch ( 1,  3) is done.  6 X  4 patches in total. 
+Patch ( 1,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  4) is done.  6 X  4 patches in total. 
+Patch ( 6,  4) is done.  6 X  4 patches in total. 
+Patch ( 3,  4) is done.  6 X  4 patches in total. 
+Patch ( 6,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  3) is done.  6 X  4 patches in total. 
+Patch ( 5,  4) is done.  6 X  4 patches in total. 
+Patch ( 4,  3) is done.  6 X  4 patches in total. 
+Patch ( 5,  3) is done.  6 X  4 patches in total. 
+Collect results from all small patches...
+Post-process spatial components of all neurons...
+Done!
+Done!
+Update the constant baselines for all pixels..
+Done!
+
+-----------------UPDATE TEMPORAL---------------------------
+Patch ( 6,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  2) is done.  6 X  4 patches in total. 
+Patch ( 1,  4) is done.  6 X  4 patches in total. 
+Patch ( 6,  2) is done.  6 X  4 patches in total. 
+Patch ( 2,  2) is done.  6 X  4 patches in total. 
+Patch ( 1,  3) is done.  6 X  4 patches in total. 
+Patch ( 2,  1) is done.  6 X  4 patches in total. 
+Patch ( 2,  4) is done.  6 X  4 patches in total. 
+Patch ( 5,  1) is done.  6 X  4 patches in total. 
+Patch ( 3,  1) is done.  6 X  4 patches in total. 
+Patch ( 4,  1) is done.  6 X  4 patches in total. 
+Patch ( 6,  3) is done.  6 X  4 patches in total. 
+Patch ( 5,  2) is done.  6 X  4 patches in total. 
+Patch ( 4,  2) is done.  6 X  4 patches in total. 
+Patch ( 6,  4) is done.  6 X  4 patches in total. 
+Patch ( 3,  2) is done.  6 X  4 patches in total. 
+Patch ( 5,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  3) is done.  6 X  4 patches in total. 
+Patch ( 5,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  4) is done.  6 X  4 patches in total. 
+Patch ( 3,  4) is done.  6 X  4 patches in total. 
+Patch ( 4,  3) is done.  6 X  4 patches in total. 
+Collect results from all small patches...
+Deconvolve and denoise all temporal traces again...
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||||
+.......
+..........................................
+.........................................
+..............................................
+............
+....
+...............................................
+.......................................................
+..
+.......................................................
+......
+................................................
+........................................................
+..........................................
+..................................................
+..........
+..................................................
+.......................................................
+.....................
+
+Done!
+Update the constant baselines for all pixels..
+Done!
+Deleted 22 neurons:  7, 73, 164, 281, 331, 380, 404, 448, 465, 467, 608, 646, 648, 731, 737, 751, 791, 821, 857, 884, 889, 1116, 
+-------------MERGE HIGHLY CORRELATED CLOSE-BY NEURONS----------
+
+All pairs of neurons are below the merging criterion!
+
+-------------MERGE HIGHLY CORRELATED NEURONS----------
+
+4 neurons will be merged into 2 new neurons
+
+Deleted 2 neurons: 163, 662, 
+
+-----------------UPDATE SPATIAL---------------------------
+Patch ( 1,  1) is done.  6 X  4 patches in total. 
+Patch ( 6,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  2) is done.  6 X  4 patches in total. 
+Patch ( 2,  1) is done.  6 X  4 patches in total. 
+Patch ( 3,  1) is done.  6 X  4 patches in total. 
+Patch ( 5,  1) is done.  6 X  4 patches in total. 
+Patch ( 6,  2) is done.  6 X  4 patches in total. 
+Patch ( 2,  2) is done.  6 X  4 patches in total. 
+Patch ( 4,  1) is done.  6 X  4 patches in total. 
+Patch ( 3,  2) is done.  6 X  4 patches in total. 
+Patch ( 4,  2) is done.  6 X  4 patches in total. 
+Patch ( 5,  2) is done.  6 X  4 patches in total. 
+Patch ( 1,  3) is done.  6 X  4 patches in total. 
+Patch ( 1,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  4) is done.  6 X  4 patches in total. 
+Patch ( 2,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  4) is done.  6 X  4 patches in total. 
+Patch ( 5,  4) is done.  6 X  4 patches in total. 
+Patch ( 4,  4) is done.  6 X  4 patches in total. 
+Patch ( 6,  4) is done.  6 X  4 patches in total. 
+Patch ( 6,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  3) is done.  6 X  4 patches in total. 
+Patch ( 5,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  3) is done.  6 X  4 patches in total. 
+Collect results from all small patches...
+Post-process spatial components of all neurons...
+Done!
+Done!
+Update the constant baselines for all pixels..
+Done!
+
+-----------------UPDATE TEMPORAL---------------------------
+Patch ( 6,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  2) is done.  6 X  4 patches in total. 
+Patch ( 1,  1) is done.  6 X  4 patches in total. 
+Patch ( 1,  4) is done.  6 X  4 patches in total. 
+Patch ( 6,  2) is done.  6 X  4 patches in total. 
+Patch ( 1,  3) is done.  6 X  4 patches in total. 
+Patch ( 2,  2) is done.  6 X  4 patches in total. 
+Patch ( 5,  1) is done.  6 X  4 patches in total. 
+Patch ( 3,  1) is done.  6 X  4 patches in total. 
+Patch ( 2,  4) is done.  6 X  4 patches in total. 
+Patch ( 4,  1) is done.  6 X  4 patches in total. 
+Patch ( 5,  2) is done.  6 X  4 patches in total. 
+Patch ( 2,  1) is done.  6 X  4 patches in total. 
+Patch ( 4,  2) is done.  6 X  4 patches in total. 
+Patch ( 6,  3) is done.  6 X  4 patches in total. 
+Patch ( 3,  2) is done.  6 X  4 patches in total. 
+Patch ( 6,  4) is done.  6 X  4 patches in total. 
+Patch ( 5,  4) is done.  6 X  4 patches in total. 
+Patch ( 5,  3) is done.  6 X  4 patches in total. 
+Patch ( 2,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  4) is done.  6 X  4 patches in total. 
+Patch ( 3,  4) is done.  6 X  4 patches in total. 
+Patch ( 3,  3) is done.  6 X  4 patches in total. 
+Patch ( 4,  3) is done.  6 X  4 patches in total. 
+Collect results from all small patches...
+Deconvolve and denoise all temporal traces again...
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||
+...
+.......
+.................
+.................
+..............................................
+.....................................
+.........................
+.........
+......................................................
+..............
+.....................................................
+..............................
+..................................................
+.................................................
+.................................................
+....................................................
+.................................................
+....................................................
+............
+
+Done!
+Update the constant baselines for all pixels..
+Done!
+Deleted 7 neurons: 179, 528, 600, 706, 760, 778, 899, 
+------------- SAVE THE WHOLE WORKSPACE ----------
+
+The current workspace has been saved into file 
+	/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/caiman_analysis/memmap_0008_d1_480_d2_752_d3_1_order_C_frames_1000__resized_source_extraction/frames_1_1000/LOGS_28-Mar_21_52_49/28-Mar_22_13_54.mat
+
+The folder has been created and old results will be overwritten. 
+[Warning: MATLAB has disabled some advanced graphics rendering features by
+switching to software OpenGL. For more information, click <a
+href="matlab:opengl('problems')">here</a>.] 
+finished cnmfe run
+----------------------------------------
+PBS job ended
+Begin PBS Epilogue Thu Mar 28 22:20:24 CDT 2019 1553829624
+JobID: 3923810.qsched03.quest.it.northwestern.edu
+Session ID:			557
+Resources Used:			cput=03:09:31,vmem=151288592kb,walltime=00:28:58,mem=42555060kb,energy_used=0
+Job exit value:			0
+----------------------------------------

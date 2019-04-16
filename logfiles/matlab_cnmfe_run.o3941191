@@ -1,0 +1,87 @@
+----------------------------------------
+PBS: Begin PBS Prologue Sat Mar 30 14:12:45 CDT 2019 1553973165
+PBS: Job ID:		3941191.qsched03.quest.it.northwestern.edu
+PBS: Username:		jma819
+PBS: Group:		jma819
+PBS: Executing queue:     normal
+PBS: Job name:		matlab_cnmfe_run
+PBS: Account:		p30771
+----------------------------------------
+   The following variables are not
+   guaranteed to be the same in 
+   prologue and the job run script  
+----------------------------------------
+PBS: Temporary Dir($TMPDIR):	/tmp/3941191.qsched03.quest.it.northwestern.edu
+PBS: Master Node($PBS_MSHOST):		qnode5117
+PBS: node file($PBS_NODEFILE):  /hpc/opt/torque6/nodes/qnode5117/aux//3941191.qsched03.quest.it.northwestern.edu
+PBS: PATH (in prologue) : /bin:/usr/bin
+PBS: WORKDIR ($PBS_O_WORKDIR) is:  /projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe
+----------------------------------------
+PBS: End PBS Prologue Sat Mar 30 14:12:45 CDT 2019 1553973165
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Name is nonexistent or not a directory:
+/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/full_movie_caiman_analysis/memmap__d1_480_d2_752_d3_1_order_C_frames_19000__resized.h5] 
+[> In path (line 109)
+  In addpath (line 96)
+  In jjm_run_from_command_line (line 7)
+  In run (line 91)] 
+[Warning: Function narginchk has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 96)
+  In jjm_run_from_command_line (line 8)
+  In run (line 91)] 
+
+The data has 752 X 480 pixels X 19000 frames. 
+Loading all data (double precision) requires 51.098 GB RAM
+
+The FOV is divided into 6 X 4 patches. 
+Each patch has 115 X 120 pixels. 
+It requires 7.294 GB RAM for loading data related to each patch. 
+
+You assigned a smaller memory for each patch.
+We suggest you process data in batch mode.
+Each batch has frames fewer than 13024. 
+
+The data has been divided into multiple patches and saved into 
+/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/full_movie_caiman_analysis/memmap__d1_480_d2_752_d3_1_order_C_frames_19000__resized_source_extraction/data_115_115_56.mat
+
+
+You have ran 1 initialization(s). 
+*  1:	 LOGS_30-Mar_13_28_02
+	-------------------------- GUIDE --------------------------
+	use  i to select the one you want to continue your analysis
+	type -i to remove some previous results from your hard drive
+	type anything if you want to start a new initialization
+	--------------------------  END  --------------------------
+* make your choice:    {Error using Sources2D/initComponents_parallel (line 168)
+No data file selected
+
+Error in run_cnmfe_matlab_jjm (line 133)
+    [center, Cn, PNR] = neuron.initComponents_parallel(K, frame_range,
+    save_initialization, use_parallel);
+
+Error in jjm_run_from_command_line (line 14)
+run_cnmfe_matlab_jjm(file_to_analyze, 13, 40, 20, false) ;
+
+Error in run (line 91)
+evalin('caller', strcat(script, ';'));
+} 
+----------------------------------------
+PBS job ended
+Begin PBS Epilogue Sat Mar 30 14:13:05 CDT 2019 1553973185
+JobID: 3941191.qsched03.quest.it.northwestern.edu
+Session ID:			5422
+Resources Used:			cput=00:00:14,vmem=0kb,walltime=00:00:15,mem=0kb,energy_used=0
+Job exit value:			0
+----------------------------------------

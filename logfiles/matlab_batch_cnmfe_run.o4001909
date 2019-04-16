@@ -1,0 +1,84 @@
+----------------------------------------
+PBS: Begin PBS Prologue Thu Apr  4 05:09:27 CDT 2019 1554372567
+PBS: Job ID:		4001909.qsched03.quest.it.northwestern.edu
+PBS: Username:		jma819
+PBS: Group:		jma819
+PBS: Executing queue:     normal
+PBS: Job name:		matlab_batch_cnmfe_run
+PBS: Account:		p30771
+----------------------------------------
+   The following variables are not
+   guaranteed to be the same in 
+   prologue and the job run script  
+----------------------------------------
+PBS: Temporary Dir($TMPDIR):	/tmp/4001909.qsched03.quest.it.northwestern.edu
+PBS: Master Node($PBS_MSHOST):		qnode8064
+PBS: node file($PBS_NODEFILE):  /hpc/opt/torque6/nodes/qnode8064/aux//4001909.qsched03.quest.it.northwestern.edu
+PBS: PATH (in prologue) : /bin:/usr/bin
+PBS: WORKDIR ($PBS_O_WORKDIR) is:  /projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe
+----------------------------------------
+PBS: End PBS Prologue Thu Apr  4 05:09:27 CDT 2019 1554372567
+The folder to search is
+/projects/p30771/miniscope/data/GRIN012/mmap_C_order/h5_files2000frames
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+/projects/p30771/miniscope/data/GRIN012/mmap_C_order/h5_files2000frames
+this is the folder path
+/projects/p30771/miniscope/data/GRIN012/mmap_C_order/h5_files2000frames
+number of frames in each batch:
+     0
+
+found files
+[Warning: Name is nonexistent or not a directory:
+/projects/p30771/miniscope/data/GRIN012/mmap_C_order/h5_files2000frames] 
+[> In path (line 109)
+  In addpath (line 96)
+  In get_data_from_folder_run_batch_small (line 32)
+  In run (line 91)] 
+[Warning: Function narginchk has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 96)
+  In get_data_from_folder_run_batch_small (line 35)
+  In run (line 91)] 
+running cnmfe
+	-------------------------- GUIDE --------------------------
+	type -i to remove the selected i-th file
+	type 0 to stop the data selection
+	type anything else to select more data
+	--------------------------  END  --------------------------
+
+You haven't selected any file yet
+make  your choice: {Operands to the || and && operators must be convertible to logical scalar
+values.
+
+Error in Sources2D/select_multiple_files (line 174)
+                elseif your_ans<0 && round(abs(your_ans))<length(nams)
+
+Error in demo_batch_1p_jjm_2 (line 15)
+nams = neuron.select_multiple_files(nams);  %if nam is [], then select data
+interactively
+
+Error in get_data_from_folder_run_batch_small (line 47)
+demo_batch_1p_jjm_2
+
+Error in run (line 91)
+evalin('caller', strcat(script, ';'));
+} 
+----------------------------------------
+PBS job ended
+Begin PBS Epilogue Thu Apr  4 05:09:45 CDT 2019 1554372585
+JobID: 4001909.qsched03.quest.it.northwestern.edu
+Session ID:			119889
+Resources Used:			cput=00:00:10,energy_used=0,mem=7752kb,vmem=740452kb,walltime=00:00:13
+Job exit value:			0
+----------------------------------------

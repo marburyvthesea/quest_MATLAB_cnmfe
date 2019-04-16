@@ -1,0 +1,66 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/full_movie_caiman_analysis/memmap__d1_480_d2_752_d3_1_order_C_frames_19000__resized.h5
+this is the folder path
+/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/full_movie_caiman_analysis/memmap__d1_480_d2_752_d3_1_order_C_frames_19000__resized.h5
+gSig:
+    13
+
+gSiz:
+    40
+
+Spatial downsampling factor:
+     4
+
+[Warning: Name is nonexistent or not a directory:
+/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/full_movie_caiman_analysis/memmap__d1_480_d2_752_d3_1_order_C_frames_19000__resized.h5] 
+[> In path (line 109)
+  In addpath (line 96)
+  In jjm_run_from_command_line (line 24)
+  In run (line 91)] 
+[Warning: Function narginchk has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 96)
+  In jjm_run_from_command_line (line 25)
+  In run (line 91)] 
+
+The data has 752 X 480 pixels X 19000 frames. 
+Loading all data (double precision) requires 51.098 GB RAM
+
+The FOV is divided into 6 X 4 patches. 
+Each patch has 115 X 120 pixels. 
+It requires 7.294 GB RAM for loading data related to each patch. 
+
+The data has been divided into multiple patches and saved into 
+/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/full_movie_caiman_analysis/memmap__d1_480_d2_752_d3_1_order_C_frames_19000__resized_source_extraction/data_115_115_56.mat
+
+{Error using load
+Cannot read file
+/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/full_movie_caiman_analysis/memmap__d1_480_d2_752_d3_1_order_C_frames_19000__resized_source_extraction/data_115_115_56.mat.
+
+Error in Sources2D/map_data_to_memory (line 191)
+                    evalin('base', sprintf('%s=load(''%s''); ', data_nam,
+                    mat_file));
+
+Error in Sources2D/getReady (line 263)
+                obj.map_data_to_memory();
+
+Error in run_cnmfe_matlab_jjm (line 126)
+    neuron.getReady(pars_envs);
+
+Error in jjm_run_from_command_line (line 31)
+run_cnmfe_matlab_jjm(file_to_analyze, gSig, gSiz, Fs, ssub, false) ;
+
+Error in run (line 91)
+evalin('caller', strcat(script, ';'));
+} 

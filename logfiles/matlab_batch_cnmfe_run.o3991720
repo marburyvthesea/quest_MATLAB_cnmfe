@@ -1,0 +1,45 @@
+----------------------------------------
+PBS: Begin PBS Prologue Tue Apr  2 22:57:01 CDT 2019 1554263821
+PBS: Job ID:		3991720.qsched03.quest.it.northwestern.edu
+PBS: Username:		jma819
+PBS: Group:		jma819
+PBS: Executing queue:     normal
+PBS: Job name:		matlab_batch_cnmfe_run
+PBS: Account:		p30771
+----------------------------------------
+   The following variables are not
+   guaranteed to be the same in 
+   prologue and the job run script  
+----------------------------------------
+PBS: Temporary Dir($TMPDIR):	/tmp/3991720.qsched03.quest.it.northwestern.edu
+PBS: Master Node($PBS_MSHOST):		qnode6041
+PBS: node file($PBS_NODEFILE):  /hpc/opt/torque6/nodes/qnode6041/aux//3991720.qsched03.quest.it.northwestern.edu
+PBS: PATH (in prologue) : /bin:/usr/bin
+PBS: WORKDIR ($PBS_O_WORKDIR) is:  /projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe
+----------------------------------------
+PBS: End PBS Prologue Tue Apr  2 22:57:01 CDT 2019 1554263821
+The folder to search is
+/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/mmapfiles_C_order/mmap_C_order/groupedby5
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+{Error using run (line 46)
+/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/batch_run_with_input_data_jjm.m(/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/mmapfiles_C_order/mmap_C_order/groupedby5)
+not found.
+} 
+----------------------------------------
+PBS job ended
+Begin PBS Epilogue Tue Apr  2 22:57:17 CDT 2019 1554263837
+JobID: 3991720.qsched03.quest.it.northwestern.edu
+Session ID:			21153
+Resources Used:			cput=00:00:09,vmem=0kb,walltime=00:00:10,mem=0kb,energy_used=0
+Job exit value:			0
+----------------------------------------

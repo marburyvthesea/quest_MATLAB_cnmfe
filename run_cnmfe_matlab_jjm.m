@@ -5,6 +5,8 @@ function neuron = run_cnmfe_matlab_jjm(nam, gSig, gSiz, Fs, ssub, plot)
     % Fs : frame rate
     % ssub: spatial_downsampling_factor 
     % plot : true or false, whether to plot contours at end of run
+    disp('downsampling factor');
+    disp(ssub);	
 
     %% make a sources object to store results
     neuron = Sources2D();
@@ -15,9 +17,9 @@ function neuron = run_cnmfe_matlab_jjm(nam, gSig, gSiz, Fs, ssub, plot)
 
     %% parameters
     % -------------------------    COMPUTATION    -------------------------  %
-    pars_envs = struct('memory_size_to_use', 50, ...   % GB, memory space you allow to use in MATLAB
-        'memory_size_per_patch', 4, ...   % GB, space for loading data within one patch
-        'patch_dims', [64, 64]);  %GB, patch size
+    pars_envs = struct('memory_size_to_use', 110, ...   % GB, memory space you allow to use in MATLAB
+        'memory_size_per_patch', 6, ...   % GB, space for loading data within one patch
+        'patch_dims', [16, 16]);  %GB, patch size
 
     % -------------------------      SPATIAL      -------------------------  %
     %gSig = 3;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering

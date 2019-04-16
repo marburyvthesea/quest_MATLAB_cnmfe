@@ -1,12 +1,12 @@
 #!/bin/bash
 #MSUB -A p30771
-#MSUB -q normal
-#MSUB -l walltime=12:00:00
+#MSUB -q short 
+#MSUB -l walltime=04:00:00
 #MSUB -M johnjmarshall@u.northwestern.edu
 #MSUB -j oe
 #MSUB -N matlab_cnmfe_run
 #MSUB -l nodes=1:ppn=12
-
+#MSUB -l mem=120gb
 
 cd ~
 
@@ -16,8 +16,8 @@ FILE_path=$1
 
 # other parameters for CNMF_E
 
-INPUT_gSig=13
-INPUT_gSiz=40
+INPUT_gSig=6
+INPUT_gSiz=20
 INPUT_Fs=20
 #spatial downsampling 
 INPUT_ssub=2
