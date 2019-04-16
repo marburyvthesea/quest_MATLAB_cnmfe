@@ -178,3 +178,21 @@ The data has been saved into
 estimating the nosie level for every pixel.......
 Time cost for estimating the nosie levels:  137.219 
 
+Starting parallel pool (parpool) using the 'local' profile ...
+connected to 12 workers.
+{Error using detrend_data (line 29)
+Out of memory. Type HELP MEMORY for your options.
+
+Error in Sources2D/initComponents_parallel (line 310)
+    parfor mpatch=1:(nr_patch*nc_patch)
+
+Error in run_cnmfe_matlab_jjm (line 136)
+    [center, Cn, PNR] = neuron.initComponents_parallel(K, frame_range,
+    save_initialization, use_parallel);
+
+Error in jjm_run_from_command_line (line 31)
+run_cnmfe_matlab_jjm(file_to_analyze, gSig, gSiz, Fs, ssub, false) ;
+
+Error in run (line 91)
+evalin('caller', strcat(script, ';'));
+} 
