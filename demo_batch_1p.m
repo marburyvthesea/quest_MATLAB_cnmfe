@@ -3,21 +3,21 @@ clear; clc; close all;
 
 %% choose multiple datasets or just one  
 neuron = Sources2D(); 
-nams = {'/projects/p30771/miniscope/data/GRIN013/H13_M33_S54/groupedby5/memmap_0000memmap_0004_resized.h5';
-        '/projects/p30771/miniscope/data/GRIN013/H13_M33_S54/groupedby5/memmap_0005memmap_0009_resized.h5';
-        '/projects/p30771/miniscope/data/GRIN013/H13_M33_S54/groupedby5/memmap_0010memmap_0014_resized.h5';
-        '/projects/p30771/miniscope/data/GRIN013/H13_M33_S54/groupedby5/memmap_0015memmap_0019_resized.h5';
-        '/projects/p30771/miniscope/data/GRIN013/H13_M33_S54/groupedby5/memmap_0020memmap_0024_resized.h5';
-        '/projects/p30771/miniscope/data/GRIN013/H13_M33_S54/groupedby5/memmap_0025memmap_0028_resized.h5';
+nams = {'/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0000memmap_0004_resized.h5';
+        '/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0005memmap_0009_resized.h5';
+        '/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0010memmap_0014_resized.h5';
+        '/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0015memmap_0019_resized.h5';
+        '/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0020memmap_0024_resized.h5';
+        '/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0025memmap_0028_resized.h5';
         };          % you can put all file names into a cell array; when it's empty, manually select files 
 nams = neuron.select_multiple_files(nams);  %if nam is [], then select data interactively 
 
 %% parameters  
 % -------------------------    COMPUTATION    -------------------------  %
 pars_envs = struct('memory_size_to_use', 120, ...   % GB, memory space you allow to use in MATLAB 
-    'memory_size_per_patch', 7, ...   % GB, space for loading data within one patch 
+    'memory_size_per_patch', 6, ...   % GB, space for loading data within one patch 
     'patch_dims', [32, 32],...  %GB, patch size 
-    'batch_frames', 4000);           % number of frames per batch 
+    'batch_frames', 5000);           % number of frames per batch 
   % -------------------------      SPATIAL      -------------------------  %
 gSig = 5;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
 gSiz = 20;          % pixel, neuron diameter
