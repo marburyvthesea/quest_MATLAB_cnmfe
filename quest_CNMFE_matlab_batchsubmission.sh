@@ -23,6 +23,6 @@ module load matlab/r2018a
 cd /projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe
 #run  
 
-matlab -nosplash -nodesktop -r "run('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/jjm_batch_run_from_command_line.m');exit;"
+matlab -nosplash -nodesktop -r "run('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/demo_batch_1p.m');exit;"
 
 
