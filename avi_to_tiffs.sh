@@ -18,6 +18,6 @@ PARALLEL=False
 #module load matlab/r2018a
 
 
-matlab -nosplash -nodesktop -r "fn_directory_to_multitiff(DIR_path, MOVIE_start, MOVIE_end, PARALLEL);"
+matlab -nosplash -nodesktop -r "addpath(DIR_path);fn_directory_to_multitiff(DIR_path, MOVIE_start, MOVIE_end, PARALLEL);"
 
 
