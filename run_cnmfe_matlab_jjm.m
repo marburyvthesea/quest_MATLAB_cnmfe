@@ -21,8 +21,8 @@ function neuron = run_cnmfe_matlab_jjm(nam, gSig, gSiz, Fs, ssub, plot, parallel
     %% parameters
     % -------------------------    COMPUTATION    -------------------------  %
     pars_envs = struct('memory_size_to_use', 110, ...   % GB, memory space you allow to use in MATLAB
-        'memory_size_per_patch', 6, ...   % GB, space for loading data within one patch
-        'patch_dims', [16, 16]);  %GB, patch size
+        'memory_size_per_patch', 2, ...   % GB, space for loading data within one patch
+        'patch_dims', [32, 32]);  %GB, patch size
 
     % -------------------------      SPATIAL      -------------------------  %
     %gSig = 3;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
@@ -75,8 +75,8 @@ function neuron = run_cnmfe_matlab_jjm(nam, gSig, gSiz, Fs, ssub, plot, parallel
 
     % -------------------------  INITIALIZATION   -------------------------  %
     K = [];             % maximum number of neurons per patch. when K=[], take as many as possible.
-    min_corr = 0.4;     % minimum local correlation for a seeding pixel
-    min_pnr = 5;       % minimum peak-to-noise ratio for a seeding pixel
+    min_corr = 0.8;     % minimum local correlation for a seeding pixel
+    min_pnr = 21;       % minimum peak-to-noise ratio for a seeding pixel
     min_pixel = gSig^2;      % minimum number of nonzero pixels for each neuron
     bd = 0;             % number of rows/columns to be ignored in the boundary (mainly for motion corrected data)
     frame_range = [];   % when [], uses all frames
