@@ -1,0 +1,41 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Colon operands must be real scalars.] 
+[> In fn_directory_to_multitiff (line 14)
+] 
+
+filepath =
+
+    '/projects/p30771/miniscope/data'
+
+
+name =
+
+    'H16_M35_S34msCam1'
+
+
+ext =
+
+    '.avi'
+
+{Error using VideoReader/init (line 601)
+The filename specified was not found in the MATLAB path.
+
+Error in VideoReader (line 171)
+            obj.init(fileName);
+
+Error in fn_avi_to_multitiff (line 7)
+obj = VideoReader(path_to_move_file);
+
+Error in fn_directory_to_multitiff (line 15)
+        fn_avi_to_multitiff(strcat(dirpath, 'msCam', num2str(x), '.avi'));
+} 

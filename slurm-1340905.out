@@ -1,0 +1,40 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+this is the folder path
+gSig:
+     7
+
+gSiz:
+    21
+
+Spatial downsampling factor:
+     2
+
+Parallel processing enabled
+false
+downsampling factor
+     2
+
+parallel processing enabled
+false
+{Undefined function or variable 'Sources2D'.
+
+Error in run_cnmfe_matlab_jjm (line 15)
+    neuron = Sources2D();
+
+Error in jjm_run_from_command_line (line 34)
+run_cnmfe_matlab_jjm(file_to_analyze, gSig, gSiz, Fs, ssub, false,
+parallel_enable) ;
+
+Error in run (line 91)
+evalin('caller', strcat(script, ';'));
+} 

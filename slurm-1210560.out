@@ -1,0 +1,44 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Colon operands must be real scalars.] 
+[> In fn_directory_to_multitiff (line 14)
+] 
+
+filepath =
+
+    '/projects/p30771/miniscope/data/H16_M35_S34'
+
+
+name =
+
+    'msCam1'
+
+
+ext =
+
+    '.avi'
+
+
+filepath =
+
+    '/projects/p30771/miniscope/data/H16_M35_S34'
+
+
+name =
+
+    'msCam2'
+
+
+ext =
+
+    '.avi'
+

@@ -1,11 +1,12 @@
 #!/bin/bash
 #SBATCH -A p30771
-#SBATCH -p normal
-#SBATCH -t 12:00:00
+#SBATCH -p short
+#SBATCH -t 2:00:00
 #SBATCH --job-name="slurm_matlab_cnmfe_run"
+#SBATCH --mem=90G
 #SBATCH -N 1
 #SBATCH -n 20 
-#SBATCH --mem-per-cpu=6000
+
 
 module purge all
 
@@ -17,11 +18,11 @@ FILE_path=$1
 
 # other parameters for CNMF_E
 
-INPUT_gSig=13
-INPUT_gSiz=40
+INPUT_gSig=7
+INPUT_gSiz=21
 INPUT_Fs=20
 #spatial downsampling 
-INPUT_ssub=8
+INPUT_ssub=2
 #use parallel processing
 INPUT_parallel_enable=false
 
