@@ -1,3 +1,0 @@
-MATLAB is selecting SOFTWARE OPENGL rendering.
-/var/spool/slurmd/job1339249/slurm_script: line 41: 123859 Killed                  matlab -nosplash -nodesktop -r "file_to_analyze='$FILE_path';gSig='$INPUT_gSig';gSiz='$INPUT_gSiz';Fs='$INPUT_Fs';ssub='$INPUT_ssub';parallel_enable='$INPUT_parallel_enable';disp(file_to_analyze);run('/projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe/jjm_run_from_command_line.m');exit;"
-slurmstepd: error: Detected 1 oom-kill event(s) in step 1339249.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
