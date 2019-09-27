@@ -42,7 +42,7 @@ cd ~
 cd /projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe
  
 # run the script 
-echo ${SLURM_ARRAY_TASK_ID}p
+echo $(sed -n ${SLURM_ARRAY_TASK_ID}p input.csv)
 
 #python batcharrayscript.py $(sed -n ${SLURM_ARRAY_TASK_ID}p input.csv | sed 's/,/;/g')
 #matlab -nosplash -nodesktop -r "file_to_analyze='$FILE_path';gSig='$INPUT_gSig';gSiz='$INPUT_gSiz';Fs='$INPUT_Fs';ssub='$INPUT_ssub';parallel_enable='$INPUT_parallel_enable';disp(file_to_analyze);run('/projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe/jjm_run_from_command_line.m');exit;"
