@@ -23,7 +23,7 @@ FILE_path=$1
 #if want to input different variables for job use ${SLURM_ARRAY_TASK_ID}p variable to get from input.csv file
 
 echo "running job ${SLURM_ARRAY_TASK_ID} with input variable"
-echo $(sed -n ${SLURM_ARRAY_TASK_ID}p input.csv)
+echo $sed -n ${SLURM_ARRAY_TASK_ID}p input.csv
 
 INPUT_gSig=$(sed -n ${SLURM_ARRAY_TASK_ID}p input.csv)
 INPUT_gSiz=21
