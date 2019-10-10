@@ -2,7 +2,7 @@
 #SBATCH -A p30771
 #SBATCH -p short
 #SBATCH -t 0:05:00
-#SBATCH -o ./logfiles/slurm%A-%j.out # STDOUT
+#SBATCH -o ./logfiles/slurm.%x-%j.out # STDOUT
 #SBATCH --job-name="slurm_matlab_cnmfe_run"
 #SBATCH --mem=90G
 #SBATCH -N 1
