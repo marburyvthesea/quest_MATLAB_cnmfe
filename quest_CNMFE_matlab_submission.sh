@@ -16,8 +16,8 @@ FILE_path=$1
 
 # other parameters for CNMF_E
 
-INPUT_gSig=6
-INPUT_gSiz=20
+INPUT_gSig=7
+INPUT_gSiz=21
 INPUT_Fs=20
 #spatial downsampling 
 INPUT_ssub=2
