@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH -A p30771
-#SBATCH -p normal
-#SBATCH -t 8:00:00
-#SBATCH -o ./logfiles/output.%a.out # STDOUT
+#SBATCH -p short
+#SBATCH -t 0:05:00
+#SBATCH -o ./logfiles/slurm%A-%j.out # STDOUT
 #SBATCH --job-name="slurm_matlab_cnmfe_run"
 #SBATCH --mem=90G
 #SBATCH -N 1
