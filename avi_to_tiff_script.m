@@ -12,4 +12,4 @@ addpath(genpath('/projects/p30771/MATLAB/CNMF_E_jjm/')) ;
 
 cd('/projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe/');
 
-fn_directory_to_multitiff(dirpath, start, end, parallel) ;
+fn_directory_to_multitiff(dirpath, movie_start, movie_end, parallel) ;

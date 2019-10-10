@@ -33,6 +33,6 @@ module load matlab/r2018a
 cd /projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe
 #run  
 
-matlab -nosplash -nodesktop -r "dirpath='$DIR_path';start='$INPUT_moviestart';end='$INPUT_movieend';parallel='$INPUT_parallel_enable';disp(dirpath);run('/projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe/avi_to_tiff_script.m');exit;"
+matlab -nosplash -nodesktop -r "dirpath='$DIR_path';movie_start='$INPUT_moviestart';movie_end='$INPUT_movieend';parallel='$INPUT_parallel_enable';disp(dirpath);run('/projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe/avi_to_tiff_script.m');exit;"
 
 
