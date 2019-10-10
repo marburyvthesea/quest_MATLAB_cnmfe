@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -A p30771
 #SBATCH -p short 
-#SBATCH -t 1:00:00
+#SBATCH -t 0:10:00
 #SBATCH -o ./logfiles/slurm.%x-%j.out # STDOUT
 #SBATCH --job-name="slurm_matlab_avi_to_tiff"
 #SBATCH --mem=90G
@@ -18,9 +18,9 @@ DIR_path=$1
 
 # 
 
-INPUT_moviestart=$2
-INPUT_movieend=$3
-INPUT_parallel_enable=$4
+INPUT_moviestart=1
+INPUT_movieend=31
+INPUT_parallel_enable=true
 
 #add project directory to PATH
 export PATH=$PATH/projects/p30771/

@@ -1,8 +1,9 @@
 #!/bin/bash
 #SBATCH -A p30771
 #SBATCH -p normal
-#SBATCH -t 12:00:00
+#SBATCH -t 01:00:00
 #SBATCH --job-name="avi_to_multitiff"
+#SBATCH -o ./logfiles/slurm.%x-%j.out # STDOUT
 #SBATCH -N 1
 #SBATCH -n 12
 #SBATCH --mem-per-cpu=6000
