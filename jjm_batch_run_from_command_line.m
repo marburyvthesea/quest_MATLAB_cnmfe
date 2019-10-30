@@ -1,9 +1,11 @@
 % path to tiff or hdf5 file
 
-files_to_analyze = {'/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/mmapfiles_C_order/mmap_C_order/memmap_0000memmap_0004_resized.h5',
-                    '/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/mmapfiles_C_order/mmap_C_order/memmap_0005memmap_0010_resized.h5',
-                    '/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/mmapfiles_C_order/mmap_C_order/memmap_0011memmap_0015_resized.h5',
-                    '/projects/p30771/miniscope/data/GRIN011/1_24_2019/H10_M19_S59/TIFs/mmapfiles_C_order/mmap_C_order/memmap_0016memmap_0018_resized.h5',
+files_to_analyze = {'/projects/p30771/miniscope/data/GRIN027/H13_M29_S44/memmap_0000memmap_0004_resized.h5';
+                    '/projects/p30771/miniscope/data/GRIN027/H13_M29_S44/memmap_0005memmap_0009_resized.h5';
+                    '/projects/p30771/miniscope/data/GRIN027/H13_M29_S44/memmap_0010memmap_0014_resized.h5';
+                    '/projects/p30771/miniscope/data/GRIN027/H13_M29_S44/memmap_0015memmap_0019_resized.h5';
+                    '/projects/p30771/miniscope/data/GRIN027/H13_M29_S44/memmap_0020memmap_0024_resized.h5';   
+                    '/projects/p30771/miniscope/data/GRIN027/H13_M29_S44/memmap_0025memmap_0029_resized.h5' 
                     };
 
 % add file to path and CNMFE repositories
