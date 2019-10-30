@@ -15,6 +15,6 @@ addpath(genpath('/projects/p30771/MATLAB/CNMF_E')) ;
 
 cd('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe');
 
-run_cnmfe_matlab_jjm(files_to_analyze, 13, 40, 20, false) ;
+run_cnmfe_batch_matlab_jjm(files_to_analyze, 13, 40, 20, false) ;
 
 disp('finished cnmfe run') 

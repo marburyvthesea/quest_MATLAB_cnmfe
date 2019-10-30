@@ -3,13 +3,10 @@ clear; clc; close all;
 
 %% choose multiple datasets or just one  
 neuron = Sources2D(); 
-nams = {'/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0000memmap_0004_resized.h5';
-        '/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0005memmap_0009_resized.h5';
-        '/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0010memmap_0014_resized.h5';
-        '/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0015memmap_0019_resized.h5';
-        '/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0020memmap_0024_resized.h5';
-        '/projects/p30771/miniscope/data/GRIN012/mmap_C_order/groupedby5/memmap_0025memmap_0028_resized.h5';
+nams = {'/Users/johnmarshall/Documents/Analysis/MiniscopeMovies/TestAnalysis/GRIN018/memmap_0005memmap_0009_resized___0___101.h5';
+        '/Users/johnmarshall/Documents/Analysis/MiniscopeMovies/TestAnalysis/GRIN018/memmap_0005memmap_0009_resized___100___201.h5'
         };          % you can put all file names into a cell array; when it's empty, manually select files 
+
 nams = neuron.select_multiple_files(nams);  %if nam is [], then select data interactively 
 
 %% parameters  
@@ -19,9 +16,9 @@ pars_envs = struct('memory_size_to_use', 120, ...   % GB, memory space you allow
     'patch_dims', [32, 32],...  %GB, patch size 
     'batch_frames', 5000);           % number of frames per batch 
   % -------------------------      SPATIAL      -------------------------  %
-gSig = 5;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
-gSiz = 20;          % pixel, neuron diameter
-ssub = 1;           % spatial downsampling factor
+gSig = 7;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
+gSiz = 21;          % pixel, neuron diameter
+ssub = 4;           % spatial downsampling factor
 with_dendrites = true;   % with dendrites or not
 if with_dendrites
     % determine the search locations by dilating the current neuron shapes

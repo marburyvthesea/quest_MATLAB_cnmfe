@@ -1,11 +1,12 @@
 #!/bin/bash
 #SBATCH -A p30771
-#SBATCH -p normal
-#SBATCH -t 12:00:00
-#SBATCH --job-name="slurm_matlab_batch_cnmfe_run"
+#SBATCH -p short 
+#SBATCH -t 2:00:00
+#SBATCH -o ./logfiles/slurm.%x-%j.out # STDOUT
+#SBATCH --job-name="slurm_matlab_cnmfe_batch_run"
+#SBATCH --mem=90G
 #SBATCH -N 1
 #SBATCH -n 20 
-#SBATCH --mem-per-cpu=6000
 
 module purge all
 

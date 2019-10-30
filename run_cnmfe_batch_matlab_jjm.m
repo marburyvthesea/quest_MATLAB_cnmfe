@@ -15,13 +15,14 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, plot)
 
     %% parameters
     % -------------------------    COMPUTATION    -------------------------  %
-    pars_envs = struct('memory_size_to_use', 20, ...   % GB, memory space you allow to use in MATLAB
+    pars_envs = struct('memory_size_to_use', 90, ...   % GB, memory space you allow to use in MATLAB
         'memory_size_per_patch', 5, ...   % GB, space for loading data within one patch
-        'patch_dims', [64, 64]);  %GB, patch size
+        'patch_dims', [64, 64],...  %GB, patch size
+        'batch_frames', 100); % number of frames per batch
 
     % -------------------------      SPATIAL      -------------------------  %
-    %gSig = 3;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
-    %gSiz = 10;          % pixel, neuron diameter
+    %gSig = gSig;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
+    %gSiz = gSiz;          % pixel, neuron diameter
     ssub = 1;           % spatial downsampling factor
     with_dendrites = true;   % with dendrites or not
     if with_dendrites
@@ -39,7 +40,7 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, plot)
     spatial_algorithm = 'hals_thresh';
 
     % -------------------------      TEMPORAL     -------------------------  %
-    %Fs = 30;             % frame rate
+    %Fs = Fs;             % frame rate
     tsub = 1;           % temporal downsampling factor
     deconv_options = struct('type', 'ar1', ... % model of the calcium traces. {'ar1', 'ar2'}
         'method', 'foopsi', ... % method for running deconvolution {'foopsi', 'constrained', 'thresholded'}
@@ -122,124 +123,34 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, plot)
         'center_psf', center_psf);
     neuron.Fs = Fs;
 
-    %% distribute data and be ready to run source extraction
-    neuron.getReady_batch(pars_envs);
+    %% distribute data and be ready to run source extraction 
+    neuron.getReady_batch(pars_envs); 
 
-    %% initialize neurons from the video data within a selected temporal range
-    if choose_params
-        % change parameters for optimized initialization
-        [gSig, gSiz, ring_radius, min_corr, min_pnr] = neuron.set_parameters();
-    end
+    %% initialize neurons in batch mode 
+    neuron.initComponents_batch(K, save_initialization, use_parallel); 
 
-    [center, Cn, PNR] = neuron.initComponents_parallel(K, frame_range, save_initialization, use_parallel);
-    neuron.compactSpatial();
-    if show_init
-        figure();
-        ax_init= axes();
-        imagesc(Cn, [0, 1]); colormap gray;
-        hold on;
-        plot(center(:, 2), center(:, 1), '.r', 'markersize', 10);
-    end
+    %% udpate spatial components for all batches
+    neuron.update_spatial_batch(use_parallel); 
 
-    %% estimate the background components
-    neuron.update_background_parallel(use_parallel);
-    neuron_init = neuron.copy();
+    %% udpate temporal components for all bataches
+    neuron.update_temporal_batch(use_parallel); 
 
-    %%  merge neurons and update spatial/temporal components
-    neuron.merge_neurons_dist_corr(show_merge);
-    neuron.merge_high_corr(show_merge, merge_thr_spatial);
+    %% update background 
+    neuron.update_background_batch(use_parallel); 
 
-    %% update spatial components
+    %% delete neurons 
 
-    % %% pick neurons from the residual
-    % [center_res, Cn_res, PNR_res] =neuron.initComponents_residual_parallel([], save_initialization, use_parallel, min_corr_res, min_pnr_res, seed_method_res);
-    % if show_init
-    %     axes(ax_init);
-    %     plot(center_res(:, 2), center_res(:, 1), '.g', 'markersize', 10);
-    % end
-    % neuron_init_res = neuron.copy();
-    if size(neuron.A, 2) == 0
-        disp('NO NEURONS FOUND WITH CURRENT INITIALIZATION SETTINGS')
-        return
-    end
+    %% merge neurons 
 
-    %% udpate spatial&temporal components, delete false positives and merge neurons
-    % update spatial
-    if update_sn
-        neuron.update_spatial_parallel(use_parallel, true);
-        udpate_sn = false;
-    else
-        neuron.update_spatial_parallel(use_parallel);
-    end
-    % merge neurons based on correlations 
-    neuron.merge_high_corr(show_merge, merge_thr_spatial);
+    %% get the correlation image and PNR image for all neurons 
+    neuron.correlation_pnr_batch(); 
 
-    for m=1:2
-        % update temporal
-        neuron.update_temporal_parallel(use_parallel);
+    %% concatenate temporal components 
+    neuron.concatenate_temporal_batch(); 
+    %neuron.viewNeurons([],neuron.C_raw); 
 
-        % delete bad neurons
-        neuron.remove_false_positives();
-
-        % merge neurons based on temporal correlation + distances 
-        neuron.merge_neurons_dist_corr(show_merge);
-    end
-
-    %% add a manual intervention and run the whole procedure for a second time
-    neuron.options.spatial_algorithm = 'nnls';
-    if with_manual_intervention
-        show_merge = true;
-        neuron.orderROIs('snr');   % order neurons in different ways {'snr', 'decay_time', 'mean', 'circularity'}
-        neuron.viewNeurons([], neuron.C_raw);
-
-        % merge closeby neurons
-        neuron.merge_close_neighbors(true, dmin_only);
-
-        % delete neurons
-        tags = neuron.tag_neurons_parallel();  % find neurons with fewer nonzero pixels than min_pixel and silent calcium transients
-        ids = find(tags>0); 
-        if ~isempty(ids)
-            neuron.viewNeurons(ids, neuron.C_raw);
-        end
-    end
-    %% run more iterations
-    neuron.update_background_parallel(use_parallel);
-    neuron.update_spatial_parallel(use_parallel);
-    neuron.update_temporal_parallel(use_parallel);
-
-    K = size(neuron.A,2);
-    tags = neuron.tag_neurons_parallel();  % find neurons with fewer nonzero pixels than min_pixel and silent calcium transients
-    neuron.remove_false_positives();
-    neuron.merge_neurons_dist_corr(show_merge);
-    neuron.merge_high_corr(show_merge, merge_thr_spatial);
-
-    if K~=size(neuron.A,2)
-        neuron.update_spatial_parallel(use_parallel);
-        neuron.update_temporal_parallel(use_parallel);
-        neuron.remove_false_positives();
-    end
-
-    %% save the workspace for future analysis
-    neuron.orderROIs('snr');
-    cnmfe_path = neuron.save_workspace();
-
-    %% show neuron contours
-    if plot
-        Coor = neuron.show_contours(0.6);
-    end
-    %% create a video for displaying the
-    %amp_ac = 140;
-    %range_ac = 5+[0, amp_ac];
-    %multi_factor = 10;
-    %range_Y = 1300+[0, amp_ac*multi_factor];
-    %avi_filename = neuron.show_demixed_video(save_demixed, kt, [], amp_ac, range_ac, range_Y, multi_factor);
-
-    %% save neurons shapes
-    neuron.save_neurons();
-
-end
-
-
+    %% save workspace 
+    neuron.save_workspace_batch(); 
 
 
 
