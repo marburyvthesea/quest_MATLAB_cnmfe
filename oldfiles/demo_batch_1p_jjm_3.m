@@ -1,24 +1,21 @@
 %% clear the workspace and select data 
-clear; clc; close all; 
+%clear; clc; close all; 
 
 %% choose multiple datasets or just one  
 neuron = Sources2D(); 
-nams = {'/Users/johnmarshall/Documents/Analysis/MiniscopeMovies/TestAnalysis/GRIN018/memmap_0005memmap_0009_resized___0___101.h5';
-        '/Users/johnmarshall/Documents/Analysis/MiniscopeMovies/TestAnalysis/GRIN018/memmap_0005memmap_0009_resized___100___201.h5'
-        };          % you can put all file names into a cell array; when it's empty, manually select files 
-
+%nams = {'./data_1p.tif'}; % you can put all file names into a cell array; when it's empty, manually select files 
 nams = neuron.select_multiple_files(nams);  %if nam is [], then select data interactively 
 
 %% parameters  
 % -------------------------    COMPUTATION    -------------------------  %
-pars_envs = struct('memory_size_to_use', 120, ...   % GB, memory space you allow to use in MATLAB 
-    'memory_size_per_patch', 6, ...   % GB, space for loading data within one patch 
-    'patch_dims', [32, 32],...  %GB, patch size 
-    'batch_frames', 5000);           % number of frames per batch 
+pars_envs = struct('memory_size_to_use', 8, ...   % GB, memory space you allow to use in MATLAB 
+    'memory_size_per_patch', 0.5, ...   % GB, space for loading data within one patch 
+    'patch_dims', [64, 64],...  %GB, patch size 
+    'batch_frames', 1000);           % number of frames per batch 
   % -------------------------      SPATIAL      -------------------------  %
-gSig = 7;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
-gSiz = 21;          % pixel, neuron diameter
-ssub = 4;           % spatial downsampling factor
+gSig = 10;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
+gSiz = 40;          % pixel, neuron diameter
+ssub = 1;           % spatial downsampling factor
 with_dendrites = true;   % with dendrites or not
 if with_dendrites
     % determine the search locations by dilating the current neuron shapes
@@ -35,7 +32,7 @@ spatial_constraints = struct('connected', true, 'circular', false);  % you can i
 spatial_algorithm = 'hals';
 
 % -------------------------      TEMPORAL     -------------------------  %
-Fs = 20;             % frame rate
+Fs = 10;             % frame rate
 tsub = 1;           % temporal downsampling factor
 deconv_options = struct('type', 'ar1', ... % model of the calcium traces. {'ar1', 'ar2'}
     'method', 'foopsi', ... % method for running deconvolution {'foopsi', 'constrained', 'thresholded'}
@@ -143,7 +140,7 @@ neuron.correlation_pnr_batch();
 
 %% concatenate temporal components 
 neuron.concatenate_temporal_batch(); 
-%neuron.viewNeurons([],neuron.C_raw); 
+neuron.viewNeurons([],neuron.C_raw); 
 
 %% save workspace 
 neuron.save_workspace_batch(); 
