@@ -1,9 +1,10 @@
-function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, plot)
+function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, ssub, parallel_enable, plot)
     %% inputs
     % gSig : pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
     % gSiz : pixel, neuron diameter
     % Fs : frame rate
-    % plot : true or false, whether to plot contours at end of run
+    % parallel_enable : 
+    % plot: whether to plot, set to false
     % nams = {'./data_1p.tif'};          % you can put all file names into a cell array; when it's empty, manually select files
 
     %% make a sources object to store results
@@ -18,12 +19,12 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, plot)
     pars_envs = struct('memory_size_to_use', 90, ...   % GB, memory space you allow to use in MATLAB
         'memory_size_per_patch', 5, ...   % GB, space for loading data within one patch
         'patch_dims', [64, 64],...  %GB, patch size
-        'batch_frames', 100); % number of frames per batch
+        'batch_frames', 5000); % number of frames per batch
 
     % -------------------------      SPATIAL      -------------------------  %
     %gSig = gSig;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
     %gSiz = gSiz;          % pixel, neuron diameter
-    ssub = 1;           % spatial downsampling factor
+    %ssub = 1;           % spatial downsampling factor
     with_dendrites = true;   % with dendrites or not
     if with_dendrites
         % determine the search locations by dilating the current neuron shapes
@@ -77,7 +78,7 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, plot)
     bd = 0;             % number of rows/columns to be ignored in the boundary (mainly for motion corrected data)
     frame_range = [];   % when [], uses all frames
     save_initialization = false;    % save the initialization procedure as a video.
-    use_parallel = true;    % use parallel computation for parallel computing
+    use_parallel = parallel_enable;    % use parallel computation for parallel computing
     show_init = false;   % show initialization results
     center_psf = true;  % set the value as true when the background fluctuation is large (usually 1p data)
     % set the value as false when the background fluctuation is small (2p)

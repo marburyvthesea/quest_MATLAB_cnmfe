@@ -8,6 +8,28 @@ files_to_analyze = {'/projects/p30771/miniscope/data/GRIN027/H13_M29_S44/memmap_
                     '/projects/p30771/miniscope/data/GRIN027/H13_M29_S44/memmap_0025memmap_0029_resized.h5' 
                     };
 
+% get cnmfe params, change to numberic values
+% path to tiff or hdf5 file
+%file_to_analyze 
+gSig = str2num(gSig) ; 
+gSiz = str2num(gSiz) ; 
+Fs = str2num(Fs) ;
+ssub = str2num(ssub) ;  
+
+
+%find all appropriate hdf files in the folder
+disp('gSig:')
+disp(gSig)
+disp('gSiz:')
+disp(gSiz)
+disp('Fs')
+disp(Fs)
+disp('Spatial downsampling factor:')
+disp(ssub)
+disp('Parallel processing enabled')
+disp(parallel_enable)
+
+
 % add file to path and CNMFE repositories
 
 addpath(file_to_analyze) ;
@@ -17,6 +39,6 @@ addpath(genpath('/projects/p30771/MATLAB/CNMF_E')) ;
 
 cd('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe');
 
-run_cnmfe_batch_matlab_jjm(files_to_analyze, 13, 40, 20, false) ;
+run_cnmfe_batch_matlab_jjm(files_to_analyze, gSig, gSiz, Fs, ssub, parallel_enable, false) ;
 
 disp('finished cnmfe run') 
