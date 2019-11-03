@@ -1,0 +1,80 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Function narginchk has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 96)] 
+{Error using run (line 78)
+/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/demo_batch_1p.m
+not found.
+} 
+
+--------------------------------------------------------------------------------
+       Segmentation violation detected at Sat Nov 02 18:20:53 2019 -0500
+--------------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding           : Disabled - No sandbox or build area path
+  Crash Mode               : continue (default)
+  Default Encoding         : UTF-8
+  Deployed                 : false
+  GNU C Library            : 2.17 stable
+  Graphics Driver          : Unknown software 
+  Java Version             : Java 1.8.0_144-b01 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  MATLAB Architecture      : glnxa64
+  MATLAB Entitlement ID    : 757995
+  MATLAB Root              : /hpc/software/matlab/R2018a
+  MATLAB Version           : 9.4.0.949201 (R2018a) Update 6
+  OpenGL                   : software
+  Operating System         : "Red Hat Enterprise Linux Server release 7.5 (Maipo)"
+  Process ID               : 6021
+  Processor ID             : x86 Family 6 Model 63 Stepping 2, GenuineIntel
+  Session Key              : 31eacb95-967d-4faa-b7ac-689e2c07af2d
+  Static TLS mitigation    : Disabled: Unnecessary 1
+  Window System            : No active display
+
+Fault Count: 1
+
+
+Abnormal termination
+
+Register State (from fault):
+  RAX = 00002af67d124e80  RBX = 0000000000000000
+  RCX = 0000000000000000  RDX = 00002af5b6f2bf00
+  RSP = 00002af5defd0948  RBP = 00002af5defd09e0
+  RSI = 0000000000000000  RDI = 00002af67d124e90
+
+   R8 = 00002af5e02e7cf0   R9 = 00000000000017d0
+  R10 = 00002af5defd0900  R11 = 00002af5a4812130
+  R12 = 00002af5defd0a28  R13 = 00002af67d124e90
+  R14 = 00002af5e02e7d18  R15 = 00002af5defd0bc0
+
+  RIP = 00002af67d124e80  EFL = 0000000000010202
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002af67d124e80                                   <unknown-module>+00000000
+[  1] 0x00002af5dd343b7f bin/glnxa64/matlab_startup_plugins/lmgrimpl/libmwlmgrimpl.so+01354623
+[  2] 0x00002af5dd344874 bin/glnxa64/matlab_startup_plugins/lmgrimpl/libmwlmgrimpl.so+01357940
+[  3] 0x00002af5dd34515a bin/glnxa64/matlab_startup_plugins/lmgrimpl/libmwlmgrimpl.so+01360218
+[  4] 0x00002af5a4811dc4 /hpc/software/matlab/R2018a/bin/glnxa64/libmwboost_thread.so.1.56.0+00069060
+[  5] 0x00002af5a578edc5                             /lib64/libpthread.so.0+00032197
+[  6] 0x00002af5a3f1a76d                                   /lib64/libc.so.6+01013613 clone+00000109
+[  7] 0x0000000000000000                                   <unknown-module>+00000000
+
+** This crash report has been saved to disk as /home/jma819/matlab_crash_dump.6021-1 **
+
+
+
+MATLAB is exiting because of fatal error
+/var/spool/slurmd/job2343228/slurm_script: line 41:  6021 Killed                  matlab -nosplash -nodesktop -r "addpath(genpath('/projects/p30771/MATLAB/CNMF_E'));gSig='$INPUT_gSig';gSiz='$INPUT_gSiz';Fs='$INPUT_Fs';ssub='$INPUT_ssub';parallel_enable='$INPUT_parallel_enable';run('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/demo_batch_1p.m');exit;"

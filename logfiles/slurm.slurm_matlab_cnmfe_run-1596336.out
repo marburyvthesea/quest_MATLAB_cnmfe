@@ -1,0 +1,343 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0005memmap_0009_resized.h5
+this is the folder path
+/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0005memmap_0009_resized.h5
+gSig:
+     7
+
+gSiz:
+    21
+
+Spatial downsampling factor:
+     2
+
+Parallel processing enabled
+false
+[Warning: Name is nonexistent or not a directory:
+/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0005memmap_0009_resized.h5] 
+[> In path (line 109)
+  In addpath (line 96)
+  In jjm_run_from_command_line (line 27)
+  In run (line 91)] 
+downsampling factor
+     2
+
+parallel processing enabled
+false
+
+The data has 752 X 480 pixels X 5000 frames. 
+Loading all data (double precision) requires 13.447 GB RAM
+
+The FOV is divided into 12 X 7 patches. 
+Each patch has 63 X 61 pixels. 
+It requires 0.528 GB RAM for loading data related to each patch. 
+
+Finished reading images
+
+-------- Loading --------
+Data is being loaded and distributed into multiple small blocks for easy access.
+
+Finished reading images
+block( 1, 1)/(25, 15) done
+block( 1, 2)/(25, 15) done
+block( 1, 3)/(25, 15) done
+block( 1, 4)/(25, 15) done
+block( 1, 5)/(25, 15) done
+block( 1, 6)/(25, 15) done
+block( 1, 7)/(25, 15) done
+block( 1, 8)/(25, 15) done
+block( 1, 9)/(25, 15) done
+block( 1,10)/(25, 15) done
+block( 1,11)/(25, 15) done
+block( 1,12)/(25, 15) done
+block( 1,13)/(25, 15) done
+block( 1,14)/(25, 15) done
+block( 1,15)/(25, 15) done
+block( 2, 1)/(25, 15) done
+block( 2, 2)/(25, 15) done
+block( 2, 3)/(25, 15) done
+block( 2, 4)/(25, 15) done
+block( 2, 5)/(25, 15) done
+block( 2, 6)/(25, 15) done
+block( 2, 7)/(25, 15) done
+block( 2, 8)/(25, 15) done
+block( 2, 9)/(25, 15) done
+block( 2,10)/(25, 15) done
+block( 2,11)/(25, 15) done
+block( 2,12)/(25, 15) done
+block( 2,13)/(25, 15) done
+block( 2,14)/(25, 15) done
+block( 2,15)/(25, 15) done
+block( 3, 1)/(25, 15) done
+block( 3, 2)/(25, 15) done
+block( 3, 3)/(25, 15) done
+block( 3, 4)/(25, 15) done
+block( 3, 5)/(25, 15) done
+block( 3, 6)/(25, 15) done
+block( 3, 7)/(25, 15) done
+block( 3, 8)/(25, 15) done
+block( 3, 9)/(25, 15) done
+block( 3,10)/(25, 15) done
+block( 3,11)/(25, 15) done
+block( 3,12)/(25, 15) done
+block( 3,13)/(25, 15) done
+block( 3,14)/(25, 15) done
+block( 3,15)/(25, 15) done
+block( 4, 1)/(25, 15) done
+block( 4, 2)/(25, 15) done
+block( 4, 3)/(25, 15) done
+block( 4, 4)/(25, 15) done
+block( 4, 5)/(25, 15) done
+block( 4, 6)/(25, 15) done
+block( 4, 7)/(25, 15) done
+block( 4, 8)/(25, 15) done
+block( 4, 9)/(25, 15) done
+block( 4,10)/(25, 15) done
+block( 4,11)/(25, 15) done
+block( 4,12)/(25, 15) done
+block( 4,13)/(25, 15) done
+block( 4,14)/(25, 15) done
+block( 4,15)/(25, 15) done
+block( 5, 1)/(25, 15) done
+block( 5, 2)/(25, 15) done
+block( 5, 3)/(25, 15) done
+block( 5, 4)/(25, 15) done
+block( 5, 5)/(25, 15) done
+block( 5, 6)/(25, 15) done
+block( 5, 7)/(25, 15) done
+block( 5, 8)/(25, 15) done
+block( 5, 9)/(25, 15) done
+block( 5,10)/(25, 15) done
+block( 5,11)/(25, 15) done
+block( 5,12)/(25, 15) done
+block( 5,13)/(25, 15) done
+block( 5,14)/(25, 15) done
+block( 5,15)/(25, 15) done
+block( 6, 1)/(25, 15) done
+block( 6, 2)/(25, 15) done
+block( 6, 3)/(25, 15) done
+block( 6, 4)/(25, 15) done
+block( 6, 5)/(25, 15) done
+block( 6, 6)/(25, 15) done
+block( 6, 7)/(25, 15) done
+block( 6, 8)/(25, 15) done
+block( 6, 9)/(25, 15) done
+block( 6,10)/(25, 15) done
+block( 6,11)/(25, 15) done
+block( 6,12)/(25, 15) done
+block( 6,13)/(25, 15) done
+block( 6,14)/(25, 15) done
+block( 6,15)/(25, 15) done
+block( 7, 1)/(25, 15) done
+block( 7, 2)/(25, 15) done
+block( 7, 3)/(25, 15) done
+block( 7, 4)/(25, 15) done
+block( 7, 5)/(25, 15) done
+block( 7, 6)/(25, 15) done
+block( 7, 7)/(25, 15) done
+block( 7, 8)/(25, 15) done
+block( 7, 9)/(25, 15) done
+block( 7,10)/(25, 15) done
+block( 7,11)/(25, 15) done
+block( 7,12)/(25, 15) done
+block( 7,13)/(25, 15) done
+block( 7,14)/(25, 15) done
+block( 7,15)/(25, 15) done
+block( 8, 1)/(25, 15) done
+block( 8, 2)/(25, 15) done
+block( 8, 3)/(25, 15) done
+block( 8, 4)/(25, 15) done
+block( 8, 5)/(25, 15) done
+block( 8, 6)/(25, 15) done
+block( 8, 7)/(25, 15) done
+block( 8, 8)/(25, 15) done
+block( 8, 9)/(25, 15) done
+block( 8,10)/(25, 15) done
+block( 8,11)/(25, 15) done
+block( 8,12)/(25, 15) done
+block( 8,13)/(25, 15) done
+block( 8,14)/(25, 15) done
+block( 8,15)/(25, 15) done
+block( 9, 1)/(25, 15) done
+block( 9, 2)/(25, 15) done
+block( 9, 3)/(25, 15) done
+block( 9, 4)/(25, 15) done
+block( 9, 5)/(25, 15) done
+block( 9, 6)/(25, 15) done
+block( 9, 7)/(25, 15) done
+block( 9, 8)/(25, 15) done
+block( 9, 9)/(25, 15) done
+block( 9,10)/(25, 15) done
+block( 9,11)/(25, 15) done
+block( 9,12)/(25, 15) done
+block( 9,13)/(25, 15) done
+block( 9,14)/(25, 15) done
+block( 9,15)/(25, 15) done
+block(10, 1)/(25, 15) done
+block(10, 2)/(25, 15) done
+block(10, 3)/(25, 15) done
+block(10, 4)/(25, 15) done
+block(10, 5)/(25, 15) done
+block(10, 6)/(25, 15) done
+block(10, 7)/(25, 15) done
+block(10, 8)/(25, 15) done
+block(10, 9)/(25, 15) done
+block(10,10)/(25, 15) done
+block(10,11)/(25, 15) done
+block(10,12)/(25, 15) done
+block(10,13)/(25, 15) done
+block(10,14)/(25, 15) done
+block(10,15)/(25, 15) done
+block(11, 1)/(25, 15) done
+block(11, 2)/(25, 15) done
+block(11, 3)/(25, 15) done
+block(11, 4)/(25, 15) done
+block(11, 5)/(25, 15) done
+block(11, 6)/(25, 15) done
+block(11, 7)/(25, 15) done
+block(11, 8)/(25, 15) done
+block(11, 9)/(25, 15) done
+block(11,10)/(25, 15) done
+block(11,11)/(25, 15) done
+block(11,12)/(25, 15) done
+block(11,13)/(25, 15) done
+block(11,14)/(25, 15) done
+block(11,15)/(25, 15) done
+block(12, 1)/(25, 15) done
+block(12, 2)/(25, 15) done
+block(12, 3)/(25, 15) done
+block(12, 4)/(25, 15) done
+block(12, 5)/(25, 15) done
+block(12, 6)/(25, 15) done
+block(12, 7)/(25, 15) done
+block(12, 8)/(25, 15) done
+block(12, 9)/(25, 15) done
+block(12,10)/(25, 15) done
+block(12,11)/(25, 15) done
+block(12,12)/(25, 15) done
+block(12,13)/(25, 15) done
+block(12,14)/(25, 15) done
+block(12,15)/(25, 15) done
+block(13, 1)/(25, 15) done
+block(13, 2)/(25, 15) done
+block(13, 3)/(25, 15) done
+block(13, 4)/(25, 15) done
+block(13, 5)/(25, 15) done
+block(13, 6)/(25, 15) done
+block(13, 7)/(25, 15) done
+block(13, 8)/(25, 15) done
+block(13, 9)/(25, 15) done
+block(13,10)/(25, 15) done
+block(13,11)/(25, 15) done
+block(13,12)/(25, 15) done
+block(13,13)/(25, 15) done
+block(13,14)/(25, 15) done
+block(13,15)/(25, 15) done
+block(14, 1)/(25, 15) done
+block(14, 2)/(25, 15) done
+block(14, 3)/(25, 15) done
+block(14, 4)/(25, 15) done
+block(14, 5)/(25, 15) done
+block(14, 6)/(25, 15) done
+block(14, 7)/(25, 15) done
+block(14, 8)/(25, 15) done
+block(14, 9)/(25, 15) done
+block(14,10)/(25, 15) done
+block(14,11)/(25, 15) done
+block(14,12)/(25, 15) done
+block(14,13)/(25, 15) done
+block(14,14)/(25, 15) done
+block(14,15)/(25, 15) done
+block(15, 1)/(25, 15) done
+block(15, 2)/(25, 15) done
+block(15, 3)/(25, 15) done
+block(15, 4)/(25, 15) done
+block(15, 5)/(25, 15) done
+block(15, 6)/(25, 15) done
+block(15, 7)/(25, 15) done
+block(15, 8)/(25, 15) done
+block(15, 9)/(25, 15) done
+block(15,10)/(25, 15) done
+block(15,11)/(25, 15) done
+block(15,12)/(25, 15) done
+block(15,13)/(25, 15) done
+block(15,14)/(25, 15) done
+block(15,15)/(25, 15) done
+block(16, 1)/(25, 15) done
+block(16, 2)/(25, 15) done
+block(16, 3)/(25, 15) done
+block(16, 4)/(25, 15) done
+block(16, 5)/(25, 15) done
+block(16, 6)/(25, 15) done
+block(16, 7)/(25, 15) done
+block(16, 8)/(25, 15) done
+block(16, 9)/(25, 15) done
+block(16,10)/(25, 15) done
+block(16,11)/(25, 15) done
+block(16,12)/(25, 15) done
+block(16,13)/(25, 15) done
+block(16,14)/(25, 15) done
+block(16,15)/(25, 15) done
+block(17, 1)/(25, 15) done
+block(17, 2)/(25, 15) done
+block(17, 3)/(25, 15) done
+block(17, 4)/(25, 15) done
+block(17, 5)/(25, 15) done
+block(17, 6)/(25, 15) done
+block(17, 7)/(25, 15) done
+block(17, 8)/(25, 15) done
+block(17, 9)/(25, 15) done
+block(17,10)/(25, 15) done
+block(17,11)/(25, 15) done
+block(17,12)/(25, 15) done
+block(17,13)/(25, 15) done
+block(17,14)/(25, 15) done
+block(17,15)/(25, 15) done
+block(18, 1)/(25, 15) done
+block(18, 2)/(25, 15) done
+block(18, 3)/(25, 15) done
+block(18, 4)/(25, 15) done
+block(18, 5)/(25, 15) done
+block(18, 6)/(25, 15) done
+block(18, 7)/(25, 15) done
+block(18, 8)/(25, 15) done
+block(18, 9)/(25, 15) done
+block(18,10)/(25, 15) done
+block(18,11)/(25, 15) done
+block(18,12)/(25, 15) done
+block(18,13)/(25, 15) done
+block(18,14)/(25, 15) done
+block(18,15)/(25, 15) done
+block(19, 1)/(25, 15) done
+block(19, 2)/(25, 15) done
+block(19, 3)/(25, 15) done
+block(19, 4)/(25, 15) done
+block(19, 5)/(25, 15) done
+block(19, 6)/(25, 15) done
+{Error using distribute_data (line 196)
+Can not write file
+/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0005memmap_0009_resized_source_extraction_23:41:20.824/data_61_61_29.mat.
+
+Error in Sources2D/getReady (line 239)
+            [data, dims, obj.P.folder_analysis] = distribute_data(nam,...
+
+Error in run_cnmfe_matlab_jjm (line 131)
+    neuron.getReady(pars_envs);
+
+Error in jjm_run_from_command_line (line 34)
+run_cnmfe_matlab_jjm(file_to_analyze, gSig, gSiz, Fs, ssub, false,
+parallel_enable) ;
+
+Error in run (line 91)
+evalin('caller', strcat(script, ';'));
+} 

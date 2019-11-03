@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -A p30771
 #SBATCH -p normal 
-#SBATCH -t 24:00:00
+#SBATCH -t 48:00:00
 #SBATCH -o ./logfiles/slurm.%x-%j.out # STDOUT
 #SBATCH --job-name="slurm_matlab_cnmfe_batch_run"
 #SBATCH --mem=90G
@@ -20,7 +20,7 @@ INPUT_gSig=7
 INPUT_gSiz=21
 INPUT_Fs=20
 #spatial downsampling 
-INPUT_ssub=2
+INPUT_ssub=4
 #use parallel processing
 INPUT_parallel_enable=false
 
@@ -35,9 +35,9 @@ module load python/anaconda3.6
 module load matlab/r2018a
 
 #cd to script directory
-cd /projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe
+cd /projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe
 #run  
 
-matlab -nosplash -nodesktop -r "addpath(genpath('/projects/p30771/MATLAB/CNMF_E'));gSig='$INPUT_gSig';gSiz='$INPUT_gSiz';Fs='$INPUT_Fs';ssub='$INPUT_ssub';parallel_enable='$INPUT_parallel_enable';run('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/jjm_batch_run_from_command_line.m');exit;"
+matlab -nosplash -nodesktop -r "addpath(genpath('/projects/p30771/MATLAB/CNMF_E_jjm'));gSig='$INPUT_gSig';gSiz='$INPUT_gSiz';Fs='$INPUT_Fs';ssub='$INPUT_ssub';parallel_enable='$INPUT_parallel_enable';run('/projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe/jjm_batch_run_from_command_line.m');exit;"
 
 

@@ -1,0 +1,62 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+/projects/p30771/miniscope/data/GRIN012/H16_M57_S23/memmap_0020memmap_0024_resized.h5
+this is the folder path
+/projects/p30771/miniscope/data/GRIN012/H16_M57_S23/memmap_0020memmap_0024_resized.h5
+gSig:
+     7
+
+gSiz:
+    21
+
+Spatial downsampling factor:
+     2
+
+Parallel processing enabled
+false
+[Warning: Name is nonexistent or not a directory:
+/projects/p30771/miniscope/data/GRIN012/H16_M57_S23/memmap_0020memmap_0024_resized.h5] 
+[> In path (line 109)
+  In addpath (line 96)
+  In jjm_run_from_command_line (line 27)
+  In run (line 91)] 
+downsampling factor
+     2
+
+parallel processing enabled
+false
+{Error using hdf5infoc
+Call to HDF5 library failed (invalidFile): "Unable to open file:
+/projects/p30771/miniscope/data/GRIN012/H16_M57_S23/memmap_0020memmap_0024_resized.h5".
+
+Error in hdf5info (line 78)
+[info.Offset, info.GroupHierarchy, majnum, minnum, relnum] = ...
+
+Error in get_data_dimension (line 33)
+    info = hdf5info(path_to_file);
+
+Error in distribute_data (line 33)
+dims = get_data_dimension(file_name);
+
+Error in Sources2D/getReady (line 239)
+            [data, dims, obj.P.folder_analysis] = distribute_data(nam,...
+
+Error in run_cnmfe_matlab_jjm (line 131)
+    neuron.getReady(pars_envs);
+
+Error in jjm_run_from_command_line (line 34)
+run_cnmfe_matlab_jjm(file_to_analyze, gSig, gSiz, Fs, ssub, false,
+parallel_enable) ;
+
+Error in run (line 91)
+evalin('caller', strcat(script, ';'));
+} 

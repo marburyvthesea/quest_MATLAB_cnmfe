@@ -31,12 +31,12 @@ disp(parallel_enable)
 
 % add file to path and CNMFE repositories
 
-addpath(file_to_analyze) ;
+addpath('/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/');
 addpath(genpath('/projects/p30771/MATLAB/CNMF_E')) ;
 
 % run script with options
 
-cd('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe');
+cd('/projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe');
 
 run_cnmfe_batch_matlab_jjm(files_to_analyze, gSig, gSiz, Fs, ssub, parallel_enable, false) ;
 

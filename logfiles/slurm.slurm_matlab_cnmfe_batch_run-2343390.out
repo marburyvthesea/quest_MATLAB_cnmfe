@@ -1,0 +1,23 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+              R2018a Update 6 (9.4.0.949201) 64-bit (glnxa64)
+                             September 5, 2018
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Function narginchk has the same name as a MATLAB builtin. We suggest
+you rename the function to avoid a potential name conflict.] 
+[> In path (line 109)
+  In addpath (line 96)] 
+{Undefined function or variable 'file_to_analyze'.
+
+Error in jjm_batch_run_from_command_line (line 11)
+addpath(file_to_analyze) ;
+
+Error in run (line 91)
+evalin('caller', strcat(script, ';'));
+} 
