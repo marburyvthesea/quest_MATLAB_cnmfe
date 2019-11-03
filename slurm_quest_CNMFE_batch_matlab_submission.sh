@@ -14,6 +14,9 @@ cd ~
 
 #path to file (h5 or tiff should work)
 
+INPUT_files_to_analyze=$1
+echo $INPUT_files_to_analyze
+
 #parameters for CNMF_E
 
 INPUT_gSig=7
@@ -35,9 +38,9 @@ module load python/anaconda3.6
 module load matlab/r2018a
 
 #cd to script directory
-cd /projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe
+cd /projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe
 #run  
 
-matlab -nosplash -nodesktop -r "addpath(genpath('/projects/p30771/MATLAB/CNMF_E'));gSig='$INPUT_gSig';gSiz='$INPUT_gSiz';Fs='$INPUT_Fs';ssub='$INPUT_ssub';parallel_enable='$INPUT_parallel_enable';run('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/jjm_batch_run_from_command_line.m');exit;"
+matlab -nosplash -nodesktop -r "addpath(genpath('/projects/p30771/MATLAB/CNMF_E_jjm'));files_to_analyze=$INPUT_files_to_analyze;gSig='$INPUT_gSig';gSiz='$INPUT_gSiz';Fs='$INPUT_Fs';ssub='$INPUT_ssub';parallel_enable='$INPUT_parallel_enable';run('/projects/p30771/MATLAB/CNMF_E/quest_analysis/quest_MATLAB_cnmfe/jjm_batch_run_from_command_line.m');exit;"
 
 
