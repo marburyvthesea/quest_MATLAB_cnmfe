@@ -1,15 +1,17 @@
 % path to tiff or hdf5 file
 
-files_to_analyze = {'/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0000memmap_0004_resized.h5';
-                    '/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0005memmap_0009_resized.h5';
-                    '/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0010memmap_0014_resized.h5';
-                    '/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0015memmap_0019_resized.h5';
-                    '/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0020memmap_0021_resized.h5'
-                    };
+%files_to_analyze = {'/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0000memmap_0004_resized.h5';
+%                    '/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0005memmap_0009_resized.h5';
+%                    '/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0010memmap_0014_resized.h5';
+%                    '/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0015memmap_0019_resized.h5';
+%                    '/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/memmap_0020memmap_0021_resized.h5'
+%                    };
 
 % get cnmfe params, change to numberic values
 % path to tiff or hdf5 file
 %file_to_analyze 
+disp(files_to_analyze); 
+
 gSig = str2num(gSig) ; 
 gSiz = str2num(gSiz) ; 
 Fs = str2num(Fs) ;
@@ -31,8 +33,13 @@ disp(parallel_enable)
 
 % add file to path and CNMFE repositories
 
+<<<<<<< HEAD
 addpath('/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/');
 addpath(genpath('/projects/p30771/MATLAB/CNMF_E')) ;
+=======
+addpath(file_to_analyze) ;
+addpath(genpath('/projects/p30771/MATLAB/CNMF_E_jjm')) ;
+>>>>>>> 70ab79033e6cc508c37e138d773378698745e84d
 
 % run script with options
 
