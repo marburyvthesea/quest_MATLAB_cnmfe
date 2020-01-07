@@ -33,13 +33,9 @@ disp(parallel_enable)
 
 % add file to path and CNMFE repositories
 
-<<<<<<< HEAD
-addpath('/projects/p30771/miniscope/data/GRIN018/H17_M41_S43/');
-addpath(genpath('/projects/p30771/MATLAB/CNMF_E')) ;
-=======
-addpath(file_to_analyze) ;
+
 addpath(genpath('/projects/p30771/MATLAB/CNMF_E_jjm')) ;
->>>>>>> 70ab79033e6cc508c37e138d773378698745e84d
+
 
 % run script with options
 

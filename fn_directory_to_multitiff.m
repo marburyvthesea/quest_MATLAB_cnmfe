@@ -1,11 +1,18 @@
-function [ output_args ] = fn_directory_to_multitiff(dirpath, movie_start, movie_end, parallel)
+function [ output_args ] = fn_directory_to_multitiff(dirpath, input_movie_start, input_movie_end, parallel)
 %AVI from miniscope to mutliframe tiff
 %   Input: full path to move file
+
+
+movie_start = str2num(input_movie_start);
+movie_end = str2num(input_movie_end);
 
 disp('movie start');
 disp(movie_start);
 disp('movie end'); 
 disp(movie_end); 
+
+
+
 
 %loop through videos  
 if parallel == true
