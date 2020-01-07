@@ -1,6 +1,15 @@
 # ignore logfolder
 logfiles/
 
+# ignore
+
+core.13565
+core.13551
+core.13544
+core.13553
+core.13563
+core.13555
+
 # ignore core files
 
 core.*
