@@ -1,3 +1,6 @@
 # ignore logfolder
-
 logfiles/
+
+# ignore core files
+
+core.*
