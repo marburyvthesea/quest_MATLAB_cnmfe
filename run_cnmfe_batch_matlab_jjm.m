@@ -16,16 +16,16 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, ssub, paralle
 
     %% parameters
     % -------------------------    COMPUTATION    -------------------------  %
-    pars_envs = struct('memory_size_to_use', 90, ...   % GB, memory space you allow to use in MATLAB
-        'memory_size_per_patch', 5, ...   % GB, space for loading data within one patch
-        'patch_dims', [64, 64],...  %GB, patch size
+    pars_envs = struct('memory_size_to_use', 100, ...   % GB, memory space you allow to use in MATLAB
+        'memory_size_per_patch', 4.5, ...   % GB, space for loading data within one patch
+        'patch_dims', [128, 128],...  %GB, patch size
         'batch_frames', 5000); % number of frames per batch
 
     % -------------------------      SPATIAL      -------------------------  %
     %gSig = gSig;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
     %gSiz = gSiz;          % pixel, neuron diameter
     %ssub = 1;           % spatial downsampling factor
-    with_dendrites = true;   % with dendrites or not
+    with_dendrites = false;   % with dendrites or not
     if with_dendrites
         % determine the search locations by dilating the current neuron shapes
         updateA_search_method = 'dilate';  %#ok<UNRCH>
@@ -72,10 +72,10 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, ssub, paralle
 
     % -------------------------  INITIALIZATION   -------------------------  %
     K = [];             % maximum number of neurons per patch. when K=[], take as many as possible.
-    min_corr = 0.4;     % minimum local correlation for a seeding pixel
-    min_pnr = 5;       % minimum peak-to-noise ratio for a seeding pixel
+    min_corr = 0.8;     % minimum local correlation for a seeding pixel
+    min_pnr = 10;       % minimum peak-to-noise ratio for a seeding pixel
     min_pixel = gSig^2;      % minimum number of nonzero pixels for each neuron
-    bd = 0;             % number of rows/columns to be ignored in the boundary (mainly for motion corrected data)
+    bd = gSiz;             % number of rows/columns to be ignored in the boundary (mainly for motion corrected data)
     frame_range = [];   % when [], uses all frames
     save_initialization = false;    % save the initialization procedure as a video.
     use_parallel = parallel_enable;    % use parallel computation for parallel computing
@@ -151,7 +151,9 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, ssub, paralle
     %neuron.viewNeurons([],neuron.C_raw); 
 
     %% save workspace 
-    neuron.save_workspace_batch(); 
+    %neuron.save_workspace_batch(); 
+    
+end
 
 
 

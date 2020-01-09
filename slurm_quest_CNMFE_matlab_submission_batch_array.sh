@@ -25,13 +25,15 @@ FILE_path=$1
 echo "running job ${SLURM_ARRAY_TASK_ID} with input variable"
 echo $sed -n ${SLURM_ARRAY_TASK_ID}p input.csv
 
-INPUT_gSig=$(sed -n ${SLURM_ARRAY_TASK_ID}p input.csv)
-INPUT_gSiz=21
+INPUT_gSig=$(sed -n ${SLURM_ARRAY_TASK_ID}p input_gSig.csv)
+INPUT_gSiz=$(sed -n ${SLURM_ARRAY_TASK_ID}p input_gSiz.csv)
+INPUT_PNR=$(sed -n ${SLURM_ARRAY_TASK_ID}p input_PRN.csv)
+INPUT_Cn=$(sed -n ${SLURM_ARRAY_TASK_ID}p input_Cn.csv)
 INPUT_Fs=20
 #spatial downsampling 
 INPUT_ssub=2
 #use parallel processing
-INPUT_parallel_enable=false
+INPUT_parallel_enable=true
 
 add project directory to PATH
 export PATH=$PATH/projects/p30771/

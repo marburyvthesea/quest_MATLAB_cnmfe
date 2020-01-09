@@ -33,13 +33,15 @@ disp(parallel_enable)
 
 % add file to path and CNMFE repositories
 
-addpath(file_to_analyze) ;
-addpath(genpath('/projects/p30771/MATLAB/CNMF_E_jjm')) ;
+%addpath(file_to_analyze) ;
+%addpath(genpath('/projects/p30771/MATLAB/CNMF_E_jjm')) ;
 
 % run script with options
 
-cd('/projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe');
+%cd('/projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe');
 
-run_cnmfe_batch_matlab_jjm(files_to_analyze, gSig, gSiz, Fs, ssub, parallel_enable, false) ;
+neuron = run_cnmfe_batch_matlab_jjm(files_to_analyze, gSig, gSiz, Fs, ssub, parallel_enable, false) ;
+
+neuron.save_workspace_batch();
 
 disp('finished cnmfe run') 
