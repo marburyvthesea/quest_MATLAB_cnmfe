@@ -1,24 +1,21 @@
 %% clear the workspace and select data 
-%clear; clc; close all; 
+clear; clc; close all; 
 
 %% choose multiple datasets or just one  
 neuron = Sources2D(); 
-nams = nams ;
-        %{'/Users/johnmarshall/Documents/Analysis/MiniscopeMovies/TestAnalysis/GRIN018/memmap_0005memmap_0009_resized___0___101.h5';
-        %'/Users/johnmarshall/Documents/Analysis/MiniscopeMovies/TestAnalysis/GRIN018/memmap_0005memmap_0009_resized___100___201.h5'
-        %};          % you can put all file names into a cell array; when it's empty, manually select files 
+nams = {'/Users/johnmarshall/Documents/MATLAB/CNMF_E_jjm/demos/graydenoised00_converted___motion_corrected_substack_450_550.tif'};          % you can put all file names into a cell array; when it's empty, manually select files 
 
-nams = neuron.select_multiple_files(nams);  %if nam is [], then select data interactively 
+nams = neuron.select_multiple_files(nams);  %if nam is [], then select data interactively
 
 %% parameters  
 % -------------------------    COMPUTATION    -------------------------  %
-pars_envs = struct('memory_size_to_use', 120, ...   % GB, memory space you allow to use in MATLAB 
+pars_envs = struct('memory_size_to_use', 50, ...   % GB, memory space you allow to use in MATLAB 
     'memory_size_per_patch', 6, ...   % GB, space for loading data within one patch 
     'patch_dims', [32, 32],...  %GB, patch size 
-    'batch_frames', 10);           % number of frames per batch 
+    'batch_frames', 1000);           % number of frames per batch 
   % -------------------------      SPATIAL      -------------------------  %
 gSig = 7;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
-gSiz = 21;          % pixel, neuron diameter
+gSiz = 40;          % pixel, neuron diameter
 ssub = 4;           % spatial downsampling factor
 with_dendrites = true;   % with dendrites or not
 if with_dendrites
@@ -123,6 +120,9 @@ neuron.Fs = Fs;
 %% distribute data and be ready to run source extraction 
 neuron.getReady_batch(pars_envs); 
 
+%% get the correlation image and PNR image for all neurons 
+neuron.correlation_pnr_batch(); 
+cnmfe_show_corr_pnr_from_batch;
 %% initialize neurons in batch mode 
 neuron.initComponents_batch(K, save_initialization, use_parallel); 
 
@@ -140,11 +140,13 @@ neuron.update_background_batch(use_parallel);
 %% merge neurons 
 
 %% get the correlation image and PNR image for all neurons 
-neuron.correlation_pnr_batch(); 
+%neuron.correlation_pnr_batch(); 
 
 %% concatenate temporal components 
 neuron.concatenate_temporal_batch(); 
-%neuron.viewNeurons([],neuron.C_raw); 
+%%
+%view neurons
+neuron.viewNeurons([],neuron.C_raw); 
 
 
 %% save workspace 
