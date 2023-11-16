@@ -25,7 +25,7 @@ INPUT_gSig=12
 INPUT_gSiz=40
 INPUT_Fs=20
 #spatial downsampling 
-INPUT_ssub=2
+INPUT_ssub=4
 #minimum local correlation and peak to noise ratio for seeding pixels
 INPUT_min_corr='0.8'
 INPUT_min_pnr=14 

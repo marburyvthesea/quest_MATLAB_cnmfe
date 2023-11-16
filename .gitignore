@@ -1,6 +1,10 @@
 # ignore logfolder
 logfiles/
 
+batch_output_files/
+
+node_modules/
+
 # ignore
 
 core.13565

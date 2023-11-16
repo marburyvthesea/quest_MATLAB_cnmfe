@@ -1,12 +1,12 @@
 #!/bin/bash
 #SBATCH -A p30771
 #SBATCH -p normal
-#SBATCH -t 12:00:00
+#SBATCH -t 24:00:00
 #SBATCH -o ./logfiles/slurm.%x-%j.out # STDOUT
 #SBATCH --job-name="slurm_matlab_cnmfe_batch_run"
-#SBATCH --mem-per-cpu=4500M
+#SBATCH --mem-per-cpu=3500M
 #SBATCH -N 1
-#SBATCH -n 35
+#SBATCH -n 60
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=jjm2128@gmail.com
 
@@ -25,10 +25,10 @@ INPUT_gSig=12
 INPUT_gSiz=40
 INPUT_Fs=20
 #spatial downsampling 
-INPUT_ssub=2
+INPUT_ssub=4
 #minimum local correlation and peak to noise ratio for seeding pixels
 INPUT_min_corr='0.8'
-INPUT_min_pnr=14 
+INPUT_min_pnr=11 
 #deconvolution parameters
 INPUT_deconvolution_type='constrained'
 #use parallel processing

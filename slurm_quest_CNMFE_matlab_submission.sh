@@ -2,11 +2,11 @@
 #SBATCH -A p30771
 #SBATCH -p short 
 #SBATCH -t 04:00:00
-#SBATCH -o ./logfiles/slurm.%x-%j.out # STDOUT
+#SBATCH -o /projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe/logfiles/slurm.%x-%j.out # STDOUT
 #SBATCH --job-name="slurm_matlab_cnmfe_run"
 #SBATCH --mem-per-cpu=5200M
 #SBATCH -N 1
-#SBATCH -n 24
+#SBATCH -n 20
 
 
 module purge all
@@ -20,10 +20,10 @@ FILE_path=$1
 # other parameters for CNMF_E
 
 INPUT_gSig=7
-INPUT_gSiz=21
+INPUT_gSiz=35
 INPUT_Fs=20
 #spatial downsampling 
-INPUT_ssub=4
+INPUT_ssub=2
 #use parallel processing
 INPUT_parallel_enable=true
 

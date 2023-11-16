@@ -1,4 +1,4 @@
-function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, ssub, parallel_enable, plot)
+function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, ssub, min_corr, min_pnr, deconvolution_type, parallel_enable, frame_size, plot)
     %% inputs
     % gSig : pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
     % gSiz : pixel, neuron diameter
@@ -19,13 +19,13 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, ssub, paralle
     pars_envs = struct('memory_size_to_use', 100, ...   % GB, memory space you allow to use in MATLAB
         'memory_size_per_patch', 4.5, ...   % GB, space for loading data within one patch
         'patch_dims', [128, 128],...  %GB, patch size
-        'batch_frames', 5000); % number of frames per batch
+        'batch_frames', frame_size); % number of frames per batch
 
     % -------------------------      SPATIAL      -------------------------  %
     %gSig = gSig;           % pixel, gaussian width of a gaussian kernel for filtering the data. 0 means no filtering
     %gSiz = gSiz;          % pixel, neuron diameter
     %ssub = 1;           % spatial downsampling factor
-    with_dendrites = true;   % with dendrites or not
+    with_dendrites = false;   % with dendrites or not
     if with_dendrites
         % determine the search locations by dilating the current neuron shapes
         updateA_search_method = 'dilate';  %#ok<UNRCH>
@@ -44,8 +44,8 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, ssub, paralle
     %Fs = Fs;             % frame rate
     tsub = 1;           % temporal downsampling factor
     deconv_options = struct('type', 'ar1', ... % model of the calcium traces. {'ar1', 'ar2'}
-        'method', 'foopsi', ... % method for running deconvolution {'foopsi', 'constrained', 'thresholded'}
-        'smin', -1, ...         % minimum spike size. When the value is negative, the actual threshold is abs(smin)*noise level (was -2)
+        'method', deconvolution_type, ... % method for running deconvolution {'foopsi', 'constrained', 'thresholded'}
+        'smin', -5, ...         % minimum spike size. When the value is negative, the actual threshold is abs(smin)*noise level (was -2)
         'optimize_pars', true, ...  % optimize AR coefficients
         'optimize_b', true, ...% optimize the baseline);
         'max_tau', 100);    % maximum decay time (unit: frame);
@@ -72,8 +72,8 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, ssub, paralle
 
     % -------------------------  INITIALIZATION   -------------------------  %
     K = [];             % maximum number of neurons per patch. when K=[], take as many as possible.
-    min_corr = 0.9;     % minimum local correlation for a seeding pixel
-    min_pnr = 30;       % minimum peak-to-noise ratio for a seeding pixel
+    %min_corr = 0.8;     % minimum local correlation for a seeding pixel
+    %min_pnr = 10;       % minimum peak-to-noise ratio for a seeding pixel
     min_pixel = gSig^2;      % minimum number of nonzero pixels for each neuron
     bd = gSiz;             % number of rows/columns to be ignored in the boundary (mainly for motion corrected data)
     frame_range = [];   % when [], uses all frames
@@ -151,7 +151,9 @@ function neuron = run_cnmfe_batch_matlab_jjm(nams, gSig, gSiz, Fs, ssub, paralle
     %neuron.viewNeurons([],neuron.C_raw); 
 
     %% save workspace 
-    neuron.save_workspace_batch(); 
+    %neuron.save_workspace_batch(); 
+    
+end
 
 
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -A p30771
 #SBATCH -p normal
-#SBATCH -t 12:00:00
+#SBATCH -t 24:00:00
 #SBATCH -o ./logfiles/slurm.%x-%j.out # STDOUT
 #SBATCH --job-name="slurm_matlab_cnmfe_batch_run"
 #SBATCH --mem-per-cpu=4500M
@@ -21,14 +21,14 @@ echo $INPUT_files_to_analyze
 
 #parameters for CNMF_E
 
-INPUT_gSig=12
-INPUT_gSiz=40
+INPUT_gSig=8
+INPUT_gSiz=32
 INPUT_Fs=20
 #spatial downsampling 
 INPUT_ssub=2
 #minimum local correlation and peak to noise ratio for seeding pixels
-INPUT_min_corr='0.8'
-INPUT_min_pnr=14 
+INPUT_min_corr='0.9'
+INPUT_min_pnr=16
 #deconvolution parameters
 INPUT_deconvolution_type='constrained'
 #use parallel processing

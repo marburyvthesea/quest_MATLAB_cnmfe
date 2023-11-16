@@ -226,7 +226,7 @@ function neuron = run_cnmfe_matlab_jjm(nam, gSig, gSiz, Fs, ssub, plot, parallel
 
     %% save the workspace for future analysis
     neuron.orderROIs('snr');
-    cnmfe_path = neuron.save_workspace();
+    %cnmfe_path = neuron.save_workspace();
 
     %% show neuron contours
     if plot

@@ -31,6 +31,10 @@ addpath(genpath('/projects/p30771/MATLAB/CNMF_E_jjm/')) ;
 
 cd('/projects/p30771/MATLAB/CNMF_E_jjm/quest_MATLAB_cnmfe/');
 
-run_cnmfe_matlab_jjm(file_to_analyze, gSig, gSiz, Fs, ssub, false, parallel_enable) ;
+neuron = run_cnmfe_matlab_jjm(file_to_analyze, gSig, gSiz, Fs, ssub, false, parallel_enable) ;
+
+neuron.save_workspace();
 
 disp('finished cnmfe run') 
+
+exit; 

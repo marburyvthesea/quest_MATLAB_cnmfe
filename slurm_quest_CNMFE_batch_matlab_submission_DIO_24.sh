@@ -28,7 +28,7 @@ INPUT_Fs=20
 INPUT_ssub=2
 #minimum local correlation and peak to noise ratio for seeding pixels
 INPUT_min_corr='0.8'
-INPUT_min_pnr=14 
+INPUT_min_pnr=11 
 #deconvolution parameters
 INPUT_deconvolution_type='constrained'
 #use parallel processing

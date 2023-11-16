@@ -5,7 +5,7 @@
 #SBATCH --mem=90G
 #SBATCH -N 1
 #SBATCH -n 20 
-#SBATCH --array=1-6%6 # run 6 jobs simultaneously with 6 lines of input file
+#SBATCH --array=1-6 # run 6 jobs simultaneously with 6 lines of input file
 #SBATCH --error=arrayJob_%A_%a.err
 #SBATCH --output=arrayJob_%A_%a.out
 #SBATCH --job-name="slurm_matlab_cnmfe_run_batch_array"
@@ -25,7 +25,7 @@ FILE_path=$1
 echo "running job ${SLURM_ARRAY_TASK_ID} with input variable"
 echo $sed -n ${SLURM_ARRAY_TASK_ID}p input.csv
 
-INPUT_gSig=$(sed -n ${SLURM_ARRAY_TASK_ID}p input.csv)
+INPUT_gSig=$(sed -n ${SLURM_ARRAY_TASK_ID}p input_args.csv)
 INPUT_gSiz=21
 INPUT_Fs=20
 #spatial downsampling 

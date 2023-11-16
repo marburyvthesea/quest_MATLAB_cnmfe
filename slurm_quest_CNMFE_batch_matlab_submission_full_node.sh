@@ -1,14 +1,12 @@
 #!/bin/bash
 #SBATCH -A p30771
-#SBATCH -p normal
-#SBATCH -t 12:00:00
+#SBATCH -p genhimem
+#SBATCH -t 24:00:00
 #SBATCH -o ./logfiles/slurm.%x-%j.out # STDOUT
-#SBATCH --job-name="slurm_matlab_cnmfe_batch_run"
-#SBATCH --mem-per-cpu=4500M
+#SBATCH --job-name="slurm_matlab_cnmfe_batch_run_full_node"
+#SBATCH --mem-per-cpu=4800M
 #SBATCH -N 1
-#SBATCH -n 35
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=jjm2128@gmail.com
+#SBATCH -n 40
 
 module purge all
 
@@ -28,7 +26,7 @@ INPUT_Fs=20
 INPUT_ssub=2
 #minimum local correlation and peak to noise ratio for seeding pixels
 INPUT_min_corr='0.8'
-INPUT_min_pnr=14 
+INPUT_min_pnr=9 
 #deconvolution parameters
 INPUT_deconvolution_type='constrained'
 #use parallel processing
